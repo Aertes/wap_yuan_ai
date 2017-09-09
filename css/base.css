@@ -438,6 +438,15 @@ button {
   line-height: 1.875rem;
   text-align: center;
   background-color: #169bd5;
+  position: relative;
+}
+.header .title i {
+  position: absolute;
+  color: #fff;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  left: 0;
+  width: 1.875rem;
 }
 .header .title h1 {
   color: #fff;
