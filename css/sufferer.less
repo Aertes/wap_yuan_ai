@@ -184,3 +184,40 @@ section .register_btn {
 
 /* 患者端详情 */
 
+.content_detail {
+    box-sizing: border-box;
+    ul>li {
+        border-bottom: 1px solid #ccc;
+        padding: .625rem;
+        span {
+            &:first-child {
+                width: 33%;
+                text-align: left;
+                display: inline-block;
+            }
+            &:last-child {
+                width: 65%;
+                text-align: left;
+                display: inline-block;
+            }
+        }
+        .w {
+            padding: 0;
+        }
+        textarea {
+            width: 100%;
+            padding: .3125rem;
+            box-sizing: border-box;
+            border: none;
+        }
+    }
+    p {
+        padding: .625rem;
+    }
+    .sufferer_img {
+        text-align: center;
+        img {
+            width: 80%;
+        }
+    }
+}
