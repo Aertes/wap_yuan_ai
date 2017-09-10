@@ -302,3 +302,12 @@ section .register_btn {
   background-color: #ccc;
 }
 /* 患者端复诊情况 */
+.content_vist {
+  margin: .625rem;
+}
+.content_vist .vist_input {
+  display: flex;
+}
+.content_vist .vist_input label {
+  display: block;
+}
