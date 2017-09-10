@@ -2,9 +2,15 @@
 .logo {
   height: 5rem;
   text-align: center;
+  width: 6.25rem;
+  margin: auto;
+  margin-top: 1.25rem;
 }
 .logo img {
   width: 100%;
+}
+#formLogin {
+  margin-top: 1.875rem;
 }
 .login div {
   text-align: center;
@@ -201,4 +207,15 @@ section .register_btn {
 }
 .content_detail .sufferer_img img {
   width: 80%;
+}
+/* 患者端答教 */
+.quiz {
+  text-align: center;
+  margin: .625rem;
+}
+.quiz h2 {
+  color: #fff;
+  background-color: #169bd5;
+  padding: .1875rem;
+  border-radius: 0.3125rem;
 }
