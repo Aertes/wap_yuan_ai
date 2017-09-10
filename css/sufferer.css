@@ -4,7 +4,6 @@
   text-align: center;
   width: 6.25rem;
   margin: auto;
-  margin-top: 1.25rem;
 }
 .logo img {
   width: 100%;
@@ -209,13 +208,97 @@ section .register_btn {
   width: 80%;
 }
 /* 患者端答教 */
+.vist,
 .quiz {
   text-align: center;
-  margin: .625rem;
+  margin: .625rem .3125rem;
 }
+.vist h2,
 .quiz h2 {
   color: #fff;
   background-color: #169bd5;
   padding: .1875rem;
   border-radius: 0.3125rem;
 }
+.content_quiz {
+  margin: .625rem;
+}
+.content_quiz ul {
+  padding: .625rem 0;
+  border-bottom: .0625rem solid #ccc;
+  box-sizing: border-box;
+}
+.content_quiz ul li:first-child {
+  margin-bottom: .625rem;
+}
+.content_quiz ul li .doctor_reply,
+.content_quiz ul li .aq_preson {
+  padding: .3125rem 0;
+}
+.content_quiz ul li .doctor_reply span:first-child,
+.content_quiz ul li .aq_preson span:first-child {
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background-color: #096;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+.content_quiz ul li .doctor_reply > span:first-child {
+  background-color: #5c9cb7;
+}
+.content_quiz ul li .content_text {
+  display: flex;
+}
+.content_quiz ul li .content_text > span:first-child {
+  width: 87%;
+  display: block;
+}
+.content_quiz ul li .content_text > span:last-child {
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background-color: #169bd5;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+/* 患者端关爱讲堂 */
+.content .content_classroom ul {
+  margin: .625rem;
+}
+.content .content_classroom ul li {
+  padding: .625rem 0;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+}
+.content .content_classroom ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+.btn_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.btn_footer .btn_bottom {
+  display: flex;
+  justify-content: center;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  background-color: #fff;
+}
+.btn_footer .btn_bottom button {
+  width: 50%;
+  border-radius: 0.3125rem;
+  margin: 0 .3125rem .3125rem;
+  background-color: #169bd5;
+}
+.btn_footer .btn_bottom button a {
+  color: #fff;
+}
+.btn_footer .btn_bottom button:last-child {
+  background-color: #ccc;
+}
+/* 患者端复诊情况 */
