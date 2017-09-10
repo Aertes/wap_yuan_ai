@@ -208,11 +208,13 @@ section .register_btn {
   width: 80%;
 }
 /* 患者端答教 */
+.chat,
 .vist,
 .quiz {
   text-align: center;
   margin: .625rem .3125rem;
 }
+.chat h2,
 .vist h2,
 .quiz h2 {
   color: #fff;
@@ -365,8 +367,23 @@ section .register_btn {
   line-height: 1.25rem;
 }
 .footer_vist .doctor_advice .record {
+  position: relative;
   padding-left: 1.25rem;
 }
 .footer_vist .doctor_advice .record p {
   font-size: .625rem;
+}
+.footer_vist .doctor_advice .record i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+  font-size: 1.5625rem;
+  color: #169bd5;
+}
+/* 患者端即时通讯 */
+.footer_chat {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
