@@ -382,8 +382,26 @@ section .register_btn {
   color: #169bd5;
 }
 /* 患者端即时通讯 */
+.content_chat .send {
+  display: flex;
+  justify-content: space-between;
+  padding: .625rem;
+  box-sizing: border-box;
+}
 .footer_chat {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.footer_chat .chat_member .file_download {
+  display: flex;
+  justify-content: space-between;
+  padding: .625rem;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+}
+.footer_chat .chat_member .member {
+  display: flex;
+  padding: .625rem;
+  box-sizing: border-box;
 }
