@@ -400,6 +400,17 @@ section .register_btn {
   box-sizing: border-box;
   border-bottom: .0625rem solid #ccc;
 }
+.footer_chat .chat_member .file_download p {
+  line-height: 1.875rem;
+}
+.footer_chat .chat_member .file_download button {
+  padding: .3125rem .625rem;
+  background-color: #169bd5;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  color: #fff;
+}
 .footer_chat .chat_member .member {
   display: flex;
   padding: .625rem;
