@@ -1,15 +1,11 @@
 /* 患者端登录 */
 .logo {
-  height: 5rem;
   text-align: center;
   width: 6.25rem;
   margin: auto;
 }
 .logo img {
   width: 100%;
-}
-#formLogin {
-  margin-top: 1.875rem;
 }
 .login div {
   text-align: center;
@@ -34,7 +30,7 @@
   line-height: 1.88rem;
   width: 1.5625rem;
   text-align: center;
-  background: #169bd5;
+  background: #FFB6C1;
   color: #fff;
   border-top-left-radius: 0.3125rem;
   border-bottom-left-radius: 0.3125rem;
@@ -148,7 +144,7 @@
   line-height: 1.88rem;
   width: 1.5625rem;
   text-align: center;
-  background: #169bd5;
+  background: #FFB6C1;
   color: #fff;
   border-top-left-radius: 0.3125rem;
   border-bottom-left-radius: 0.3125rem;
@@ -197,6 +193,7 @@ section .register_btn {
   padding: .3125rem;
   box-sizing: border-box;
   border: none;
+  background: #ffe9ec;
 }
 .content_detail p {
   padding: .625rem;
@@ -289,7 +286,7 @@ section .register_btn {
   justify-content: center;
   height: 2.1875rem;
   line-height: 2.1875rem;
-  background-color: #fff;
+  background-color: #ffe9ec;
 }
 .btn_footer .btn_bottom button {
   width: 50%;
@@ -358,7 +355,7 @@ section .register_btn {
   background-color: #fff;
 }
 .footer_vist .doctor_advice .advice {
-  background-color: #39F;
+  background-color: #FFB6C1;
   color: #fff;
   padding: 0 .625rem;
   box-sizing: border-box;
