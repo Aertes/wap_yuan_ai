@@ -1,0 +1,513 @@
+/* 患者端登录 */
+.logo {
+  text-align: center;
+  width: 6.25rem;
+  margin: auto;
+}
+.logo img {
+  width: 100%;
+}
+.login div {
+  text-align: center;
+  margin: 1.25rem;
+  position: relative;
+}
+.login div input {
+  width: 100%;
+  height: 1.875rem;
+  border: .0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  padding-left: 1.875rem;
+  padding-right: .625rem;
+  box-sizing: border-box;
+}
+.login div p {
+  width: 100%;
+  margin: auto;
+}
+.login div .add-on {
+  position: absolute;
+  line-height: 1.88rem;
+  width: 1.5625rem;
+  text-align: center;
+  background: #FFB6C1;
+  color: #fff;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+.login .forgot_password {
+  text-align: right;
+}
+.login .forgot_password a {
+  width: 100%;
+  margin: auto;
+}
+.register_btn,
+.login_btn {
+  margin: 1.25rem;
+}
+.register_btn button,
+.login_btn button {
+  width: 100%;
+  height: 1.875rem;
+  background-color: #FFB6C1;
+  color: #fff;
+  border-radius: 0.3125rem;
+}
+.login_modal_content {
+  text-align: center;
+  color: #FFB6C1;
+  border-radius: 0.3125rem;
+  padding: 1.25rem .9375rem;
+  box-sizing: border-box;
+}
+/* 患者端注册 */
+.register {
+  padding: .625rem;
+}
+.register div {
+  position: relative;
+}
+.register div label {
+  font-size: .75rem;
+  display: block;
+}
+.register div #upload_file {
+  width: 6.25rem;
+  height: 6.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.register .upload_case a {
+  width: 6.25rem;
+  height: 6.25rem;
+  display: inline-block;
+  position: relative;
+  border: .125rem dotted #ccc;
+  box-sizing: border-box;
+}
+.register .upload_case a::before {
+  content: '';
+  position: absolute;
+  width: .3125rem;
+  height: 3.75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+  border-radius: 0.3125rem;
+}
+.register .upload_case a::after {
+  content: '';
+  width: 3.75rem;
+  height: .3125rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+  border-radius: 0.3125rem;
+}
+.register .upload_case .upload_btn {
+  float: left;
+  overflow: hidden;
+}
+.register .upload_case .upload_img {
+  float: left;
+  overflow: hidden;
+  width: 6.25rem;
+  height: 6.25rem;
+  margin-right: .625rem;
+  padding: .625rem;
+  box-sizing: border-box;
+  border: .125rem dotted #ccc;
+}
+.register .upload_case .upload_img img {
+  width: 100%;
+}
+.register .input_text {
+  margin: .625rem 0;
+}
+.register .input_text input {
+  width: 100%;
+  height: 1.875rem;
+  border: .0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  padding-left: 1.875rem;
+  padding-right: .625rem;
+  box-sizing: border-box;
+}
+.register .input_text .add-on {
+  position: absolute;
+  line-height: 1.88rem;
+  width: 1.5625rem;
+  text-align: center;
+  background: #FFB6C1;
+  color: #fff;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+.register .medical_history {
+  margin-top: .625rem;
+}
+.register .medical_history textarea {
+  width: 100%;
+  padding: .3125rem;
+  box-sizing: border-box;
+}
+.register .medical_history p {
+  text-align: right;
+  font-size: .625rem;
+}
+.register .surgery_checked {
+  padding-right: 1.25rem;
+}
+section .register_btn {
+  margin: 1.25rem .625rem;
+}
+/* 患者端详情 */
+.content_detail {
+  box-sizing: border-box;
+}
+.content_detail ul > li {
+  border-bottom: 1px solid #ccc;
+  padding: .625rem;
+}
+.content_detail ul > li span:first-child {
+  width: 33%;
+  text-align: left;
+  display: inline-block;
+}
+.content_detail ul > li span:last-child {
+  width: 65%;
+  text-align: left;
+  display: inline-block;
+}
+.content_detail ul > li .w {
+  padding: 0;
+}
+.content_detail ul > li textarea {
+  width: 100%;
+  padding: .3125rem;
+  box-sizing: border-box;
+  border: none;
+  background: #ffe9ec;
+}
+.content_detail p {
+  padding: .625rem;
+}
+.content_detail .sufferer_img {
+  text-align: center;
+}
+.content_detail .sufferer_img img {
+  width: 80%;
+}
+/* 患者端答教 */
+.chat,
+.vist,
+.quiz {
+  text-align: center;
+  margin: .625rem .3125rem;
+}
+.chat h2,
+.vist h2,
+.quiz h2 {
+  color: #fff;
+  background-color: #FFB6C1;
+  padding: .1875rem;
+  border-radius: 0.3125rem;
+}
+.content_quiz {
+  margin: .625rem;
+}
+.content_quiz ul {
+  padding: .625rem 0;
+  border-bottom: .0625rem solid #ccc;
+  box-sizing: border-box;
+}
+.content_quiz ul li:first-child {
+  margin-bottom: .625rem;
+}
+.content_quiz ul li .doctor_reply,
+.content_quiz ul li .aq_preson {
+  padding: .3125rem 0;
+}
+.content_quiz ul li .doctor_reply span:first-child,
+.content_quiz ul li .aq_preson span:first-child {
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background-color: #096;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+.content_quiz ul li .doctor_reply > span:first-child {
+  background-color: #5c9cb7;
+}
+.content_quiz ul li .content_text {
+  display: flex;
+}
+.content_quiz ul li .content_text > span:first-child {
+  width: 87%;
+  display: block;
+}
+.content_quiz ul li .content_text > span:last-child {
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background-color: #FFB6C1;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+/* 患者端关爱讲堂 */
+.content .content_classroom ul {
+  margin: .625rem;
+}
+.content .content_classroom ul li {
+  padding: .625rem 0;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+}
+.content .content_classroom ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+.btn_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.btn_footer .btn_bottom {
+  display: flex;
+  justify-content: center;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  background-color: #ffe9ec;
+}
+.btn_footer .btn_bottom button {
+  width: 50%;
+  border-radius: 0.3125rem;
+  margin: 0 .3125rem .3125rem;
+  background-color: #FFB6C1;
+}
+.btn_footer .btn_bottom button a {
+  color: #fff;
+}
+.btn_footer .btn_bottom button:last-child {
+  background-color: #ccc;
+}
+/* 患者端复诊情况 */
+.content_vist {
+  margin: .625rem;
+}
+.content_vist .vist_progress,
+.content_vist .vist_input {
+  display: flex;
+  padding: .625rem 0;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+}
+.content_vist .vist_progress label,
+.content_vist .vist_input label {
+  display: block;
+}
+.content_vist .vist_progress .radio span,
+.content_vist .vist_input .radio span {
+  vertical-align: middle;
+  padding: 0 .3125rem;
+  box-sizing: border-box;
+}
+.content_vist .vist_other {
+  padding: .625rem 0;
+  box-sizing: border-box;
+}
+.content_vist .vist_other label {
+  display: block;
+}
+.content_vist .vist_other textarea {
+  width: 100%;
+  border: .0625rem solid #ccc;
+}
+.content_vist .vist_progress input {
+  margin-right: .625rem;
+}
+.content_vist .vist_btn button {
+  width: 100%;
+  height: 1.875rem;
+  background-color: #FFB6C1;
+  color: #fff;
+  border-radius: 0.3125rem;
+}
+.footer_vist {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer_vist .doctor_advice {
+  height: 2.5rem;
+  display: flex;
+  padding: 0 .625rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.footer_vist .doctor_advice .advice {
+  background-color: #FFB6C1;
+  color: #fff;
+  padding: 0 .625rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.footer_vist .doctor_advice .advice p {
+  line-height: 1.25rem;
+}
+.footer_vist .doctor_advice .record {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.footer_vist .doctor_advice .record p {
+  font-size: .625rem;
+}
+.footer_vist .doctor_advice .record i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+  font-size: 1.5625rem;
+  color: #FFB6C1;
+}
+/* 患者端即时通讯 */
+.content_chat .content_text {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-bottom: none;
+  height: 13.7rem;
+  margin: .3125rem;
+  margin-bottom: 0;
+  overflow-y: scroll;
+  padding: .625rem;
+}
+.content_chat .content_text div {
+  margin: .3125rem 0;
+}
+.content_chat .content_text div a {
+  border: .0625rem solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-table;
+}
+.content_chat .content_text div img {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+.content_chat .content_text div span {
+  max-width: 60%;
+  font-size: .6875rem;
+  border-radius: 0.3125rem;
+  background-color: #FFB6C1;
+  padding: 0 .3125rem;
+  box-sizing: border-box;
+}
+.content_chat .content_text .right_text {
+  display: flex;
+  justify-content: flex-end;
+}
+.content_chat .content_text .right_text span {
+  text-align: right;
+  margin-right: .3125rem;
+}
+.content_chat .content_text .right_text a:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: .3125rem solid transparent;
+  border-left: 0.625rem solid #FFB6C1;
+  border-bottom: .3125rem solid transparent;
+  position: absolute;
+  top: 50%;
+  left: -0.6rem;
+  transform: translateY(-50%);
+}
+.content_chat .content_text .left_text {
+  display: flex;
+  justify-content: flex-start;
+}
+.content_chat .content_text .left_text span {
+  text-align: left;
+  margin-left: .3125rem;
+  background-color: #ccc;
+}
+.content_chat .content_text .left_text a:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: .3125rem solid transparent;
+  border-right: .625rem solid #ccc;
+  border-bottom: .3125rem solid transparent;
+  position: absolute;
+  top: 50%;
+  right: -0.6rem;
+  transform: translateY(-50%);
+}
+.footer_chat {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer_chat .send {
+  display: flex;
+  justify-content: space-between;
+  padding: .3125rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-top: none;
+  margin: .3125rem;
+  margin-top: 0;
+}
+.footer_chat .send .button button {
+  padding: .3125rem .625rem;
+  background-color: #FFB6C1;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  color: #fff;
+}
+.footer_chat .send .input {
+  width: 80%;
+}
+.footer_chat .send .input input {
+  width: 100%;
+  height: 1.5625rem;
+  padding: .3125rem;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.footer_chat .chat_member .file_download {
+  display: flex;
+  justify-content: space-between;
+  padding: .3125rem .625rem;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ccc;
+}
+.footer_chat .chat_member .file_download p {
+  line-height: 1.25rem;
+}
+.footer_chat .chat_member .file_download button {
+  padding: .3125rem .625rem;
+  background-color: #FFB6C1;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  color: #fff;
+}
+.footer_chat .chat_member .member {
+  display: flex;
+  padding: .625rem;
+  box-sizing: border-box;
+}
