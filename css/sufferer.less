@@ -20,7 +20,7 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .0625rem solid #ccc;
+            border: .0625rem solid #ececec;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
@@ -78,7 +78,7 @@
     div {
         position: relative;
         label {
-            font-size: .75rem;
+            font-size: .65rem;
             display: block;
         }
         #upload_file {
@@ -96,7 +96,7 @@
             height: 6.25rem;
             display: inline-block;
             position: relative;
-            border: .125rem dotted #ccc;
+            border: .125rem dotted #ececec;
             box-sizing: border-box;
             &::before {
                 content: '';
@@ -106,7 +106,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: #ccc;
+                background-color: #ececec;
                 border-radius: @borderRadius;
             }
             &::after {
@@ -117,7 +117,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: #ccc;
+                background-color: #ececec;
                 border-radius: @borderRadius;
             }
         }
@@ -133,7 +133,7 @@
             margin-right: .625rem;
             padding: .625rem;
             box-sizing: border-box;
-            border: .125rem dotted #ccc;
+            border: .125rem dotted #ececec;
             img {
                 width: 100%;
             }
@@ -144,7 +144,7 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .0625rem solid #ccc;
+            border: .0625rem solid #ececec;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
@@ -167,6 +167,7 @@
             width: 100%;
             padding: .3125rem;
             box-sizing: border-box;
+            border: .0625rem solid #ececec;
         }
         p {
             text-align: right;
@@ -188,7 +189,7 @@ section .register_btn {
 .content_detail {
     box-sizing: border-box;
     ul>li {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #ececec;
         padding: .625rem;
         span {
             &:first-child {
@@ -210,7 +211,6 @@ section .register_btn {
             padding: .3125rem;
             box-sizing: border-box;
             border: none;
-            background: #ffe9ec;
         }
     }
     p {
@@ -244,7 +244,7 @@ section .register_btn {
     margin: .625rem;
     ul {
         padding: .625rem 0;
-        border-bottom: .0625rem solid #ccc;
+        border-bottom: .0625rem solid #ececec;
         box-sizing: border-box;
         li {
             &:first-child {
@@ -263,21 +263,36 @@ section .register_btn {
                         display: inline-block;
                         text-align: center;
                     }
+                    &:last-child {
+                        color: #096;
+                        font-size: .75rem;
+                    }
                 }
             }
             .doctor_reply>span {
                 &:first-child {
                     background-color: #5c9cb7;
                 }
+                &:last-child {
+                    color: #5c9cb7;
+                    font-size: .75rem;
+                }
             }
             .content_text {
                 display: flex;
+                font-size: .625rem;
+                p{
+                    width: 100%;
+                    padding: .3125rem .625rem;
+                    box-sizing: border-box;
+                }
             }
             .content_text>span {
                 &:first-child {
-                    // float: left;
                     width: 87%;
                     display: block;
+                    padding: 0 .625rem;
+                    box-sizing: border-box;
                 }
                 &:last-child {
                     width: 1.875rem;
@@ -303,7 +318,7 @@ section .register_btn {
             li {
                 padding: .625rem 0;
                 box-sizing: border-box;
-                border-bottom: .0625rem solid #ccc;
+                border-bottom: .0625rem solid #ececec;
                 a {
                     display: flex;
                     justify-content: space-between;
@@ -332,7 +347,7 @@ section .register_btn {
                 color: #fff;
             }
             &:last-child {
-                background-color: #ccc
+                background-color: #ececec
             }
         }
     }
@@ -348,7 +363,8 @@ section .register_btn {
         display: flex;
         padding: .625rem 0;
         box-sizing: border-box;
-        border-bottom: .0625rem solid #ccc;
+        border-bottom: .0625rem solid #ececec;
+        line-height: .8125rem;
         label {
             display: block;
         }
@@ -360,6 +376,14 @@ section .register_btn {
             }
         }
     }
+    .radio_input {
+        box-sizing: border-box;
+        border-bottom: .0625rem solid #ececec;
+        padding-bottom: .625rem;
+        span {
+            margin-right: .625rem;
+        }
+    }
     .vist_other {
         padding: .625rem 0;
         box-sizing: border-box;
@@ -368,7 +392,7 @@ section .register_btn {
         }
         textarea {
             width: 100%;
-            border: .0625rem solid #ccc;
+            border: .0625rem solid #ececec;
         }
     }
     .vist_progress {
@@ -394,7 +418,6 @@ section .register_btn {
     .doctor_advice {
         height: 2.5rem;
         display: flex;
-        padding: 0 .625rem;
         box-sizing: border-box;
         background-color: #fff;
         .advice {
@@ -410,6 +433,7 @@ section .register_btn {
         .record {
             position: relative;
             padding-left: 1.25rem;
+            width: 100%;
             p {
                 font-size: .625rem;
             }
@@ -417,7 +441,7 @@ section .register_btn {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                right: -20px;
+                right: 1.25rem;
                 font-size: 1.5625rem;
                 color: @counter-style;
             }
@@ -428,20 +452,23 @@ section .register_btn {
 
 /* 患者端即时通讯 */
 
+.content_chat_scoll {
+    padding-top: 1.875rem;
+    padding-bottom: 6.25rem;
+    box-sizing: border-box;
+}
+
 .content_chat {
     .content_text {
-        border: 1px solid #ccc;
         box-sizing: border-box;
         border-bottom: none;
-        height: 13.7rem;
         margin: .3125rem;
         margin-bottom: 0;
-        overflow-y: scroll;
         padding: .625rem;
         div {
             margin: .3125rem 0;
             a {
-                border: .0625rem solid #ccc;
+                border: .0625rem solid #ececec;
                 box-sizing: border-box;
                 position: relative;
                 display: inline-table;
@@ -454,16 +481,18 @@ section .register_btn {
                 max-width: 60%;
                 font-size: .6875rem;
                 border-radius: @borderRadius;
-                background-color: @counter-style;
-                padding: 0 .3125rem;
+                background-color: #b2e281;
+                padding: .3125rem;
                 box-sizing: border-box;
+                color: #000;
+                align-items: baseline;
             }
         }
         .right_text {
             display: flex;
             justify-content: flex-end;
             span {
-                text-align: right;
+                text-align: left;
                 margin-right: .3125rem;
             }
             a {
@@ -473,7 +502,7 @@ section .register_btn {
                     width: 0;
                     height: 0;
                     border-top: .3125rem solid transparent;
-                    border-left: .625rem solid @counter-style;
+                    border-left: .625rem solid #b2e281;
                     border-bottom: .3125rem solid transparent;
                     position: absolute;
                     top: 50%;
@@ -488,7 +517,8 @@ section .register_btn {
             span {
                 text-align: left;
                 margin-left: .3125rem;
-                background-color: #ccc;
+                background-color: #fff;
+                border: 1px solid #f5f0f0;
             }
             a {
                 &:before {
@@ -497,11 +527,11 @@ section .register_btn {
                     width: 0;
                     height: 0;
                     border-top: .3125rem solid transparent;
-                    border-right: .625rem solid #ccc;
+                    border-right: .625rem solid #fff;
                     border-bottom: .3125rem solid transparent;
                     position: absolute;
                     top: 50%;
-                    right: -.6rem;
+                    right: -.7rem;
                     transform: translateY(-50%)
                 }
             }
@@ -513,16 +543,13 @@ section .register_btn {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background: #fff6f6;
     .send {
         display: flex;
         justify-content: space-between;
-        padding: .3125rem;
+        padding: .3125rem .625rem;
         box-sizing: border-box;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        border-top: none;
-        margin: .3125rem;
-        margin-top: 0;
+        background: #f1f1f1;
         .button {
             button {
                 padding: .3125rem .625rem;
@@ -540,8 +567,8 @@ section .register_btn {
                 height: 1.5625rem;
                 padding: .3125rem;
                 box-sizing: border-box;
-                border-bottom: .0625rem solid #ccc;
-                background-color: rgba(0, 0, 0, 0.1);
+                border: 1px solid #ececec;
+                border-radius: .1875rem;
             }
         }
     }
@@ -551,7 +578,7 @@ section .register_btn {
             justify-content: space-between;
             padding: .3125rem .625rem;
             box-sizing: border-box;
-            border-bottom: .0625rem solid #ccc;
+            border-bottom: .0625rem solid #ececec;
             p {
                 line-height: 1.25rem;
             }

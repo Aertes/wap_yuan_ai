@@ -15,7 +15,7 @@
 .login div input {
   width: 100%;
   height: 1.875rem;
-  border: .0625rem solid #ccc;
+  border: .0625rem solid #ececec;
   border-radius: 0.3125rem;
   padding-left: 1.875rem;
   padding-right: .625rem;
@@ -69,7 +69,7 @@
   position: relative;
 }
 .register div label {
-  font-size: .75rem;
+  font-size: .65rem;
   display: block;
 }
 .register div #upload_file {
@@ -85,7 +85,7 @@
   height: 6.25rem;
   display: inline-block;
   position: relative;
-  border: .125rem dotted #ccc;
+  border: .125rem dotted #ececec;
   box-sizing: border-box;
 }
 .register .upload_case a::before {
@@ -96,7 +96,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ccc;
+  background-color: #ececec;
   border-radius: 0.3125rem;
 }
 .register .upload_case a::after {
@@ -107,7 +107,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ccc;
+  background-color: #ececec;
   border-radius: 0.3125rem;
 }
 .register .upload_case .upload_btn {
@@ -122,7 +122,7 @@
   margin-right: .625rem;
   padding: .625rem;
   box-sizing: border-box;
-  border: .125rem dotted #ccc;
+  border: .125rem dotted #ececec;
 }
 .register .upload_case .upload_img img {
   width: 100%;
@@ -133,7 +133,7 @@
 .register .input_text input {
   width: 100%;
   height: 1.875rem;
-  border: .0625rem solid #ccc;
+  border: .0625rem solid #ececec;
   border-radius: 0.3125rem;
   padding-left: 1.875rem;
   padding-right: .625rem;
@@ -156,6 +156,7 @@
   width: 100%;
   padding: .3125rem;
   box-sizing: border-box;
+  border: .0625rem solid #ececec;
 }
 .register .medical_history p {
   text-align: right;
@@ -172,7 +173,7 @@ section .register_btn {
   box-sizing: border-box;
 }
 .content_detail ul > li {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ececec;
   padding: .625rem;
 }
 .content_detail ul > li span:first-child {
@@ -193,7 +194,6 @@ section .register_btn {
   padding: .3125rem;
   box-sizing: border-box;
   border: none;
-  background: #ffe9ec;
 }
 .content_detail p {
   padding: .625rem;
@@ -224,7 +224,7 @@ section .register_btn {
 }
 .content_quiz ul {
   padding: .625rem 0;
-  border-bottom: .0625rem solid #ccc;
+  border-bottom: .0625rem solid #ececec;
   box-sizing: border-box;
 }
 .content_quiz ul li:first-child {
@@ -244,15 +244,32 @@ section .register_btn {
   display: inline-block;
   text-align: center;
 }
+.content_quiz ul li .doctor_reply span:last-child,
+.content_quiz ul li .aq_preson span:last-child {
+  color: #096;
+  font-size: .75rem;
+}
 .content_quiz ul li .doctor_reply > span:first-child {
   background-color: #5c9cb7;
 }
+.content_quiz ul li .doctor_reply > span:last-child {
+  color: #5c9cb7;
+  font-size: .75rem;
+}
 .content_quiz ul li .content_text {
   display: flex;
+  font-size: .625rem;
+}
+.content_quiz ul li .content_text p {
+  width: 100%;
+  padding: .3125rem .625rem;
+  box-sizing: border-box;
 }
 .content_quiz ul li .content_text > span:first-child {
   width: 87%;
   display: block;
+  padding: 0 .625rem;
+  box-sizing: border-box;
 }
 .content_quiz ul li .content_text > span:last-child {
   width: 1.875rem;
@@ -270,7 +287,7 @@ section .register_btn {
 .content .content_classroom ul li {
   padding: .625rem 0;
   box-sizing: border-box;
-  border-bottom: .0625rem solid #ccc;
+  border-bottom: .0625rem solid #ececec;
 }
 .content .content_classroom ul li a {
   display: flex;
@@ -298,7 +315,7 @@ section .register_btn {
   color: #fff;
 }
 .btn_footer .btn_bottom button:last-child {
-  background-color: #ccc;
+  background-color: #ececec;
 }
 /* 患者端复诊情况 */
 .content_vist {
@@ -309,7 +326,8 @@ section .register_btn {
   display: flex;
   padding: .625rem 0;
   box-sizing: border-box;
-  border-bottom: .0625rem solid #ccc;
+  border-bottom: .0625rem solid #ececec;
+  line-height: .8125rem;
 }
 .content_vist .vist_progress label,
 .content_vist .vist_input label {
@@ -321,6 +339,14 @@ section .register_btn {
   padding: 0 .3125rem;
   box-sizing: border-box;
 }
+.content_vist .radio_input {
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #ececec;
+  padding-bottom: .625rem;
+}
+.content_vist .radio_input span {
+  margin-right: .625rem;
+}
 .content_vist .vist_other {
   padding: .625rem 0;
   box-sizing: border-box;
@@ -330,7 +356,7 @@ section .register_btn {
 }
 .content_vist .vist_other textarea {
   width: 100%;
-  border: .0625rem solid #ccc;
+  border: .0625rem solid #ececec;
 }
 .content_vist .vist_progress input {
   margin-right: .625rem;
@@ -350,7 +376,6 @@ section .register_btn {
 .footer_vist .doctor_advice {
   height: 2.5rem;
   display: flex;
-  padding: 0 .625rem;
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -367,6 +392,7 @@ section .register_btn {
 .footer_vist .doctor_advice .record {
   position: relative;
   padding-left: 1.25rem;
+  width: 100%;
 }
 .footer_vist .doctor_advice .record p {
   font-size: .625rem;
@@ -375,26 +401,28 @@ section .register_btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -20px;
+  right: 1.25rem;
   font-size: 1.5625rem;
   color: #FFB6C1;
 }
 /* 患者端即时通讯 */
+.content_chat_scoll {
+  padding-top: 1.875rem;
+  padding-bottom: 6.25rem;
+  box-sizing: border-box;
+}
 .content_chat .content_text {
-  border: 1px solid #ccc;
   box-sizing: border-box;
   border-bottom: none;
-  height: 13.7rem;
   margin: .3125rem;
   margin-bottom: 0;
-  overflow-y: scroll;
   padding: .625rem;
 }
 .content_chat .content_text div {
   margin: .3125rem 0;
 }
 .content_chat .content_text div a {
-  border: .0625rem solid #ccc;
+  border: .0625rem solid #ececec;
   box-sizing: border-box;
   position: relative;
   display: inline-table;
@@ -407,16 +435,18 @@ section .register_btn {
   max-width: 60%;
   font-size: .6875rem;
   border-radius: 0.3125rem;
-  background-color: #FFB6C1;
-  padding: 0 .3125rem;
+  background-color: #b2e281;
+  padding: .3125rem;
   box-sizing: border-box;
+  color: #000;
+  align-items: baseline;
 }
 .content_chat .content_text .right_text {
   display: flex;
   justify-content: flex-end;
 }
 .content_chat .content_text .right_text span {
-  text-align: right;
+  text-align: left;
   margin-right: .3125rem;
 }
 .content_chat .content_text .right_text a:before {
@@ -425,7 +455,7 @@ section .register_btn {
   width: 0;
   height: 0;
   border-top: .3125rem solid transparent;
-  border-left: 0.625rem solid #FFB6C1;
+  border-left: .625rem solid #b2e281;
   border-bottom: .3125rem solid transparent;
   position: absolute;
   top: 50%;
@@ -439,7 +469,8 @@ section .register_btn {
 .content_chat .content_text .left_text span {
   text-align: left;
   margin-left: .3125rem;
-  background-color: #ccc;
+  background-color: #fff;
+  border: 1px solid #f5f0f0;
 }
 .content_chat .content_text .left_text a:before {
   content: '';
@@ -447,27 +478,25 @@ section .register_btn {
   width: 0;
   height: 0;
   border-top: .3125rem solid transparent;
-  border-right: .625rem solid #ccc;
+  border-right: .625rem solid #fff;
   border-bottom: .3125rem solid transparent;
   position: absolute;
   top: 50%;
-  right: -0.6rem;
+  right: -0.7rem;
   transform: translateY(-50%);
 }
 .footer_chat {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background: #fff6f6;
 }
 .footer_chat .send {
   display: flex;
   justify-content: space-between;
-  padding: .3125rem;
-  border: 1px solid #ccc;
+  padding: .3125rem .625rem;
   box-sizing: border-box;
-  border-top: none;
-  margin: .3125rem;
-  margin-top: 0;
+  background: #f1f1f1;
 }
 .footer_chat .send .button button {
   padding: .3125rem .625rem;
@@ -485,15 +514,15 @@ section .register_btn {
   height: 1.5625rem;
   padding: .3125rem;
   box-sizing: border-box;
-  border-bottom: .0625rem solid #ccc;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ececec;
+  border-radius: .1875rem;
 }
 .footer_chat .chat_member .file_download {
   display: flex;
   justify-content: space-between;
   padding: .3125rem .625rem;
   box-sizing: border-box;
-  border-bottom: .0625rem solid #ccc;
+  border-bottom: .0625rem solid #ececec;
 }
 .footer_chat .chat_member .file_download p {
   line-height: 1.25rem;

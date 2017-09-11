@@ -23,21 +23,16 @@
         </div>
     </header>
     <section class="content">
-        <section>
-            <div class="vist">
-                <h2> 填写复诊情况</h2>
-            </div>
-        </section>
         <div class="content_vist">
             <form id="formVist" class="form_vist">
-                <div class="vist_input">
+                <div class="radio_input">
                     <label for="">近一周是否按医嘱坚持服药：</label>
-                    <div class="radio">
+                    <!-- <div class="radio"> -->
                         <input type="radio" name="drug1" id="">
-                        <span>是</span>
+                        <span class="yes">是</span>
                         <input type="radio" name="drug2" id="">
-                        <span>否</span>
-                    </div>
+                        <span class="no">否</span>
+                    <!-- </div> -->
                 </div>
                 <div class="vist_input">
                     <label for="">原因：</label>
@@ -94,9 +89,27 @@
     
     <script>
         $(function () {
-            $(document).delegate('.ask', 'click', function () {
-                alert(1);
+            var flag = true;
+            $(document).delegate('.yes', 'click', function () {
+                if (flag) {
+                    $('input[name=drug1]').prop('checked', false).val(0);
+                    flag = false;
+                } else {
+                    $('input[name=drug1]').prop('checked', true).val(1);
+                    flag = true;
+                }
             })
+            $(document).delegate('.no', 'click', function () {
+                if (flag) {
+                    $('input[name=drug2]').prop('checked', false).val(0);
+                    flag = false;
+                } else {
+                    $('input[name=drug2]').prop('checked', true).val(1);
+                    flag = true;
+                }
+            })
+
+
         })
     </script>
 </body>
