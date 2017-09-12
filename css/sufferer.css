@@ -63,6 +63,9 @@
   box-sizing: border-box;
 }
 /* 患者端注册 */
+.icon-mobile-phone {
+  font-size: .875rem;
+}
 .register {
   padding: .625rem;
 }
@@ -70,8 +73,9 @@
   position: relative;
 }
 .register div label {
-  font-size: .65rem;
+  font-size: .75rem;
   display: block;
+  margin-bottom: .625rem;
 }
 .register div #upload_file {
   width: 6.25rem;
@@ -80,6 +84,10 @@
   left: 0;
   top: 0;
   display: none;
+}
+.register .upload_case .upload_file {
+  display: flex;
+  flex-wrap: wrap;
 }
 .register .upload_case a {
   width: 6.25rem;
@@ -111,16 +119,18 @@
   background-color: #ececec;
   border-radius: 0.3125rem;
 }
+.register .upload_case .upload_ {
+  width: 100%;
+}
 .register .upload_case .upload_btn {
-  float: left;
   overflow: hidden;
+  margin: auto;
 }
 .register .upload_case .upload_img {
-  float: left;
   overflow: hidden;
   width: 6.25rem;
   height: 6.25rem;
-  margin-right: .625rem;
+  margin: auto;
   padding: .625rem;
   box-sizing: border-box;
   border: .125rem dotted #ececec;

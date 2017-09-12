@@ -21,17 +21,20 @@ p,
 blockquote,
 th,
 td {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 fieldset,
 img {
-  border: 0;
+    border: 0;
 }
+
 address,
 caption,
 cite,
@@ -41,445 +44,576 @@ em,
 strong,
 th,
 var {
-  font-style: normal;
-  font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
 }
+
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 capation,
 th {
-  text-align: left;
+    text-align: left;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  text-decoration: none;
-  font-size: 100%;
-  font-weight: normal;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: normal;
 }
+
 q:before,
 q:after {
-  content: ' ';
+    content: ' ';
 }
+
 abbr,
 acronym {
-  border: 0;
+    border: 0;
 }
+
 input {
-  padding-top: 0;
-  padding-bottom: 0;
-  font-family: "SimSun", "宋体";
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
 }
+
 select,
 input {
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
 select,
 input,
 textarea {
-  font-size: .75rem;
-  margin: 0;
-  -webkit-appearance: none;
+    font-size: .75rem;
+    margin: 0;
+    -webkit-appearance: none;
 }
+
 textarea {
-  resize: none;
+    resize: none;
 }
+
+
 /*防止拖动*/
+
 img {
-  border: 0;
-  vertical-align: middle;
+    border: 0;
+    vertical-align: middle;
 }
+
+
 /*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
+
 body {
-  font: 12px/150% Arial, Verdana, "\5b8b\4f53";
-  color: #666;
-  background: #ffe9ec;
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff6f6;
 }
+
 a {
-  color: #666;
-  text-decoration: none;
+    color: #666;
+    text-decoration: none;
 }
+
 a:hover {
-  color: #666;
+    color: #666;
 }
-a:-webkit-any-link:active{
-  color: #666;
+
+a:-webkit-any-link:active {
+    color: #666;
 }
+
 s,
 i,
 em {
-  font-style: normal;
-  text-decoration: none;
+    font-style: normal;
+    text-decoration: none;
 }
+
 fieldset,
 img,
 input,
 button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  outline-style: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
 }
+
+
 /*去掉input等聚焦时的蓝色边框*/
+
 .col-red {
-  color: #C81623!important;
+    color: #C81623!important;
 }
+
 .f12 {
-  font-size: .75rem;
+    font-size: .75rem;
 }
+
 .f13 {
-  font-size: .8125rem;
+    font-size: .8125rem;
 }
+
 .f14 {
-  font-size: .875rem;
+    font-size: .875rem;
 }
+
 .f16 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
+
 .f20 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
+
 .fb {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .fn {
-  font-weight: normal;
+    font-weight: normal;
 }
+
 .t2 {
-  text-indent: 2em;
+    text-indent: 2em;
 }
+
 .lh150 {
-  line-height: 150%;
+    line-height: 150%;
 }
+
 .lh180 {
-  line-height: 180%;
+    line-height: 180%;
 }
+
 .lh200 {
-  line-height: 200%;
+    line-height: 200%;
 }
+
 .unl {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 .no_unl {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 .tl {
-  text-align: left;
+    text-align: left;
 }
+
 .tc {
-  text-align: center;
+    text-align: center;
 }
+
 .tr {
-  text-align: right;
+    text-align: right;
 }
+
 .bc {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .fl {
-  float: left;
-  display: inline;
+    float: left;
+    display: inline;
 }
+
 .fr {
-  float: right;
-  display: inline;
+    float: right;
+    display: inline;
 }
+
 .cb {
-  clear: both;
+    clear: both;
 }
+
 .cl {
-  clear: left;
+    clear: left;
 }
+
 .cr {
-  clear: right;
+    clear: right;
 }
+
 .clearfix:after {
-  content: '.';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
+
 .clearfix {
-  display: inline-block;
+    display: inline-block;
 }
+
 *html .clearfix {
-  height: 1%;
+    height: 1%;
 }
+
 .Clearfix {
-  display: block;
+    display: block;
 }
+
 .vm {
-  vertical-align: center;
+    vertical-align: center;
 }
+
 .pr {
-  position: relative;
+    position: relative;
 }
+
 .pa {
-  position: absolute;
+    position: absolute;
 }
+
 .abs-right {
-  position: absolute;
-  right: 0;
+    position: absolute;
+    right: 0;
 }
+
 .zoom {
-  zoom: 1;
+    zoom: 1;
 }
+
 .hidden {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 .none {
-  display: none;
+    display: none;
 }
+
 .w {
-  width: 100%;
+    width: 100%;
 }
+
 .h {
-  height: 100%;
+    height: 100%;
 }
+
 .m10 {
-  margin: .625rem;
+    margin: .625rem;
 }
+
 .m15 {
-  margin: .9375rem;
+    margin: .9375rem;
 }
+
 .m30 {
-  margin: 1.875rem;
+    margin: 1.875rem;
 }
+
 .mt5 {
-  margin-top: .3125rem;
+    margin-top: .3125rem;
 }
+
 .mt10 {
-  margin-top: .625rem;
+    margin-top: .625rem;
 }
+
 .mt15 {
-  margin-top: .9375rem;
+    margin-top: .9375rem;
 }
+
 .mt20 {
-  margin-top: 1.25rem;
+    margin-top: 1.25rem;
 }
+
 .mt30 {
-  margin-top: 1.875rem;
+    margin-top: 1.875rem;
 }
+
 .mt50 {
-  margin-top: 3.125rem;
+    margin-top: 3.125rem;
 }
+
 .mt100 {
-  margin-top: 6.25rem;
+    margin-top: 6.25rem;
 }
+
 .mb5 {
-  margin-bottom: .3125rem;
+    margin-bottom: .3125rem;
 }
+
 .mb10 {
-  margin-bottom: .625rem;
+    margin-bottom: .625rem;
 }
+
 .mb15 {
-  margin-bottom: .9375rem;
+    margin-bottom: .9375rem;
 }
+
 .mb20 {
-  margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 }
+
 .mb30 {
-  margin-bottom: 1.875rem;
+    margin-bottom: 1.875rem;
 }
+
 .mb50 {
-  margin-bottom: 3.125rem;
+    margin-bottom: 3.125rem;
 }
+
 .mb100 {
-  margin-bottom: 6.25rem;
+    margin-bottom: 6.25rem;
 }
+
 .ml5 {
-  margin-left: .3125rem;
+    margin-left: .3125rem;
 }
+
 .ml10 {
-  margin-left: .625rem;
+    margin-left: .625rem;
 }
+
 .ml15 {
-  margin-left: .9375rem;
+    margin-left: .9375rem;
 }
+
 .ml20 {
-  margin-left: 1.25rem;
+    margin-left: 1.25rem;
 }
+
 .ml30 {
-  margin-left: 1.875rem;
+    margin-left: 1.875rem;
 }
+
 .ml50 {
-  margin-left: 3.125rem;
+    margin-left: 3.125rem;
 }
+
 .ml100 {
-  margin-left: 6.25rem;
+    margin-left: 6.25rem;
 }
+
 .mr5 {
-  margin-right: .3125rem;
+    margin-right: .3125rem;
 }
+
 .mr10 {
-  margin-right: .625rem;
+    margin-right: .625rem;
 }
+
 .mr15 {
-  margin-right: .9375rem;
+    margin-right: .9375rem;
 }
+
 .mr20 {
-  margin-right: 1.25rem;
+    margin-right: 1.25rem;
 }
+
 .mr30 {
-  margin-right: 1.875rem;
+    margin-right: 1.875rem;
 }
+
 .mr50 {
-  margin-right: 3.125rem;
+    margin-right: 3.125rem;
 }
+
 .mr100 {
-  margin-right: .625rem;
+    margin-right: .625rem;
 }
+
 .p10 {
-  padding: .625rem;
+    padding: .625rem;
 }
+
 .p15 {
-  padding: .9375rem;
+    padding: .9375rem;
 }
+
 .p30 {
-  padding: 1.875rem;
+    padding: 1.875rem;
 }
+
 .pt5 {
-  padding-top: .3125rem;
+    padding-top: .3125rem;
 }
+
 .pt10 {
-  padding-top: .625rem;
+    padding-top: .625rem;
 }
+
 .pt15 {
-  padding-top: .9375rem;
+    padding-top: .9375rem;
 }
+
 .pt20 {
-  padding-top: 1.25rem;
+    padding-top: 1.25rem;
 }
+
 .pt30 {
-  padding-top: 1.875rem;
+    padding-top: 1.875rem;
 }
+
 .pt50 {
-  padding-top: 3.125rem;
+    padding-top: 3.125rem;
 }
+
 .pt100 {
-  padding-top: 6.25rem;
+    padding-top: 6.25rem;
 }
+
 .pb5 {
-  padding-bottom: .3125rem;
+    padding-bottom: .3125rem;
 }
+
 .pb10 {
-  padding-bottom: .625rem;
+    padding-bottom: .625rem;
 }
+
 .pb15 {
-  padding-bottom: .9375rem;
+    padding-bottom: .9375rem;
 }
+
 .pb20 {
-  padding-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
 }
+
 .pb30 {
-  padding-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
 }
+
 .pb50 {
-  padding-bottom: 3.125rem;
+    padding-bottom: 3.125rem;
 }
+
 .pb100 {
-  padding-bottom: 6.25rem;
+    padding-bottom: 6.25rem;
 }
+
 .pl5 {
-  padding-left: .3125rem;
+    padding-left: .3125rem;
 }
+
 .pl10 {
-  padding-left: .625rem;
+    padding-left: .625rem;
 }
+
 .pl15 {
-  padding-left: .9375rem;
+    padding-left: .9375rem;
 }
+
 .pl20 {
-  padding-left: 1.25rem;
+    padding-left: 1.25rem;
 }
+
 .pl30 {
-  padding-left: 1.875rem;
+    padding-left: 1.875rem;
 }
+
 .pl50 {
-  padding-left: 3.125rem;
+    padding-left: 3.125rem;
 }
+
 .pl100 {
-  padding-left: 6.25rem;
+    padding-left: 6.25rem;
 }
+
 .pr5 {
-  padding-right: .3125rem;
+    padding-right: .3125rem;
 }
+
 .pr10 {
-  padding-right: .625rem;
+    padding-right: .625rem;
 }
+
 .pr15 {
-  padding-right: .9375rem;
+    padding-right: .9375rem;
 }
+
 .pr20 {
-  padding-right: 1.25rem;
+    padding-right: 1.25rem;
 }
+
 .pr30 {
-  padding-right: 1.875rem;
+    padding-right: 1.875rem;
 }
+
 .pr50 {
-  padding-right: 3.125rem;
+    padding-right: 3.125rem;
 }
+
 .pr100 {
-  padding-right: 6.25rem;
+    padding-right: 6.25rem;
 }
+
 .help-block {
-  text-align: left;
-  color: red;
-  padding: .1875rem 0;
+    text-align: left;
+    color: red;
+    padding: .1875rem 0;
 }
+
+
 /* common */
+
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
+
 .header .title {
-  height: 1.875rem;
-  line-height: 1.875rem;
-  text-align: center;
-  background-color: #FFB6C1;
-  position: relative;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    text-align: center;
+    background-color: #FFB6C1;
+    position: relative;
 }
+
 .header .title i {
-  position: absolute;
-  color: #fff;
-  height: 1.875rem;
-  line-height: 1.875rem;
-  left: 0;
-  width: 1.875rem;
+    position: absolute;
+    color: #fff;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    left: 0;
+    width: 1.875rem;
 }
+
 .header .title h1 {
-  color: #fff;
+    color: #fff;
 }
+
 .content {
-  padding-top: 1.875rem;
-  padding-bottom: 2.5rem;
-  box-sizing: border-box;
+    padding-top: 1.875rem;
+    padding-bottom: 2.5rem;
+    box-sizing: border-box;
 }
+
 .bg_model {
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
 }
+
 .modal_content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 99999;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99999;
+    transform: translate(-50%, -50%);
 }
