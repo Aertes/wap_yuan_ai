@@ -73,7 +73,7 @@ acronym {
 input {
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "SimSun", "宋体";
+  font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
 }
 select,
 input {
@@ -88,6 +88,12 @@ textarea {
 }
 textarea {
   resize: none;
+}
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: .625rem;
+  line-height: 1.875rem;
+  font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
 }
 /*防止拖动*/
 img {
