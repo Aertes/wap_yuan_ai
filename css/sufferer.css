@@ -2,10 +2,10 @@
 .logo {
   text-align: center;
   width: 6.25rem;
-  margin: auto;
+  margin: 2.5rem auto;
 }
 .logo img {
-  width: 100%;
+  width: 70%;
 }
 .login div {
   text-align: center;
