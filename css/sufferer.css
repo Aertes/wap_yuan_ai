@@ -27,7 +27,7 @@
 }
 .login div .add-on {
   position: absolute;
-  line-height: 1.88rem;
+  line-height: 1.8rem;
   width: 1.5625rem;
   text-align: center;
   background: #FFB6C1;
@@ -35,16 +35,17 @@
   border-top-left-radius: 0.3125rem;
   border-bottom-left-radius: 0.3125rem;
 }
-.login .forgot_password {
+.forgot_password {
   text-align: right;
+  margin: .625rem 1.25rem;
 }
-.login .forgot_password a {
+.forgot_password a {
   width: 100%;
   margin: auto;
 }
 .register_btn,
 .login_btn {
-  margin: 1.25rem;
+  margin: 1.25rem 1.25rem 0;
 }
 .register_btn button,
 .login_btn button {
@@ -56,7 +57,7 @@
 }
 .login_modal_content {
   text-align: center;
-  color: #FFB6C1;
+  color: #666;
   border-radius: 0.3125rem;
   padding: 1.25rem .9375rem;
   box-sizing: border-box;
