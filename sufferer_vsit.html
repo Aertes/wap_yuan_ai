@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
@@ -28,31 +29,31 @@
                 <div class="radio_input">
                     <label for="">近一周是否按医嘱坚持服药：</label>
                     <!-- <div class="radio"> -->
-                        <input type="radio" name="drug1" id="">
-                        <span class="yes">是</span>
-                        <input type="radio" name="drug2" id="">
-                        <span class="no">否</span>
+                    <input type="radio" name="drug1" id="" class="mybox" onclick="checkBox($(this));">
+                    <span>是</span>
+                    <input type="radio" name="drug2" id="" class="mybox" onclick="checkBox($(this));">
+                    <span>否</span>
                     <!-- </div> -->
                 </div>
                 <div class="vist_input">
                     <label for="">原因：</label>
                     <div class="radio">
-                        <input type="radio" name="reason1" id="">
+                        <input type="radio" name="reason1" id="" class="reason" onclick="checkBox1($(this));">
                         <span>停药</span>
-                        <input type="radio" name="reason2" id="">
+                        <input type="radio" name="reason2" id="" class="reason" onclick="checkBox1($(this));">
                         <span>漏服</span>
                     </div>
                 </div>
                 <div class="vist_progress">
-                    <input type="radio" name="progress1" id="">
+                    <input type="radio" name="progress1" id="" class="progress" onclick="checkBox2($(this));">
                     <label for="">我的并已好转，没必要再继续服药</label>
                 </div>
                 <div class="vist_progress">
-                    <input type="radio" name="progress2" id="">
+                    <input type="radio" name="progress2" id="" class="progress" onclick="checkBox2($(this));">
                     <label for="">我的病没有改善，服药没有用处</label>
                 </div>
                 <div class="vist_progress">
-                    <input type="radio" name="progress3" id="">
+                    <input type="radio" name="progress3" id="" class="progress" onclick="checkBox2($(this));">
                     <label for=""> 担心药物对我大脑有伤害</label>
                 </div>
                 <div class="vist_other">
@@ -86,29 +87,28 @@
             </ul>
         </div>
     </footer>
-    
-    <script>
-        $(function () {
-            var flag = true;
-            $(document).delegate('.yes', 'click', function () {
-                if (flag) {
-                    $('input[name=drug1]').prop('checked', false).val(0);
-                    flag = false;
-                } else {
-                    $('input[name=drug1]').prop('checked', true).val(1);
-                    flag = true;
-                }
-            })
-            $(document).delegate('.no', 'click', function () {
-                if (flag) {
-                    $('input[name=drug2]').prop('checked', false).val(0);
-                    flag = false;
-                } else {
-                    $('input[name=drug2]').prop('checked', true).val(1);
-                    flag = true;
-                }
-            })
 
+    <script>
+        function checkBox(obj) {
+            if (obj.is(":checked")) {
+                $('input.mybox').prop('checked', false).val(0);
+                obj.prop('checked', true).val(1);
+            }
+        }
+        function checkBox1(obj) {
+            if (obj.is(":checked")) {
+                $('input.reason').prop('checked', false).val(0);
+                obj.prop('checked', true).val(1);
+            }
+        }
+        function checkBox2(obj) {
+            if (obj.is(":checked")) {
+                $('input.progress').prop('checked', false).val(0);
+                obj.prop('checked', true).val(1);
+            }
+        }
+        $(function () {
+            
 
         })
     </script>
