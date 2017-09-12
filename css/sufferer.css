@@ -85,6 +85,11 @@
   top: 0;
   display: none;
 }
+.register .upload_case {
+  border: .0625rem solid #ececec;
+  padding: .625rem 0;
+  border-radius: .625rem;
+}
 .register .upload_case .upload_file {
   display: flex;
   flex-wrap: wrap;
@@ -123,7 +128,7 @@
   width: 100%;
 }
 .register .upload_case .upload_btn {
-  padding: .625rem;
+  padding: .625rem .625rem 0 .625rem;
 }
 .register .upload_case .upload_img {
   overflow: hidden;
