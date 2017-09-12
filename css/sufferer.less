@@ -217,7 +217,7 @@ section .register_btn {
 .content_detail {
     box-sizing: border-box;
     ul>li {
-        border-bottom: 1px solid #ececec;
+        border-bottom: .5px solid #ececec;
         padding: .625rem;
         span {
             &:first-child {
@@ -344,12 +344,21 @@ section .register_btn {
         ul {
             margin: .625rem;
             li {
-                padding: .625rem 0;
+                // padding: .625rem 0;
+                height: 1.875rem;
+                line-height: 1.875rem;
                 box-sizing: border-box;
                 border-bottom: .5px solid #ececec;
                 a {
                     display: flex;
                     justify-content: space-between;
+                }
+                span{
+                    &:last-child{
+                        font-size: .58rem;
+                        color: #5c9cb7;
+                        line-height: 2.5rem;
+                    }
                 }
             }
         }
