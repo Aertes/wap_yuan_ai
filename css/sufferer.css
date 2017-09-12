@@ -87,49 +87,33 @@
 }
 .register .upload_case .upload_file {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 .register .upload_case a {
-  width: 6.25rem;
-  height: 6.25rem;
   display: inline-block;
-  position: relative;
-  border: .125rem dotted #ececec;
-  box-sizing: border-box;
-}
-.register .upload_case a::before {
-  content: '';
   position: absolute;
-  width: .3125rem;
-  height: 3.75rem;
+  font-size: 1.55rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ececec;
-  border-radius: 0.3125rem;
-}
-.register .upload_case a::after {
-  content: '';
-  width: 3.75rem;
-  height: .3125rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ececec;
-  border-radius: 0.3125rem;
+  color: #ececec;
 }
 .register .upload_case .upload_ {
   width: 100%;
 }
 .register .upload_case .upload_btn {
-  padding: .625rem .625rem 0 .625rem;
+  width: 5.25rem;
+  height: 5.25rem;
+  margin: auto .3125rem;
+  border: .125rem dotted #ececec;
+  box-sizing: border-box;
+  position: relative;
 }
 .register .upload_case .upload_img {
   overflow: hidden;
-  width: 6.25rem;
-  height: 6.25rem;
-  margin: auto;
+  width: 5.25rem;
+  height: 5.25rem;
+  margin: auto .3125rem;
   padding: .625rem;
   box-sizing: border-box;
   border: .125rem dotted #ececec;
