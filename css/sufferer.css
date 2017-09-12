@@ -285,7 +285,7 @@ section .register_btn {
 .content .content_classroom ul li {
   padding: .625rem 0;
   box-sizing: border-box;
-  border-bottom: .0625rem solid #ececec;
+  border-bottom: .5px solid #ececec;
 }
 .content .content_classroom ul li a {
   display: flex;
@@ -301,7 +301,7 @@ section .register_btn {
   justify-content: center;
   height: 2.1875rem;
   line-height: 2.1875rem;
-  background-color: #ffe9ec;
+  background-color: #fff6f6;
 }
 .btn_footer .btn_bottom button {
   width: 50%;
