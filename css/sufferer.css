@@ -123,8 +123,7 @@
   width: 100%;
 }
 .register .upload_case .upload_btn {
-  overflow: hidden;
-  margin: auto;
+  padding: .625rem;
 }
 .register .upload_case .upload_img {
   overflow: hidden;
