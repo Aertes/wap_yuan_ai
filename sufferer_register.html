@@ -44,16 +44,15 @@
             </div>
             <div class="upload_case input_text">
                 <label for="">上传病例</label>
-                <div class="upload_file clearfix">
-                    <div class="upload_img odd">
-                        <img src="./images/error.gif" alt="">
-                    </div>
-                    <div class="upload_img even">
-                        <img src="./images/error.gif" alt="">
-                    </div>
-                    <div class="upload_btn">
+                <div class="upload_file weui-uploader__bd clearfix">
+                    <ul class="weui-uploader__files" id="uploaderFiles">
+                        <li class="weui-uploader__file"><img src="./images/timg.jpg" alt=""></li>
+                        <li class="weui-uploader__file"><img src="./images/timg.jpg" alt=""></li>
+                        <li class="weui-uploader__file"><img src="./images/timg.jpg" alt=""></li>
+                    </ul>
+                    <div class="upload_btn weui-uploader__input-box">
                         <a href="javascript:;" class=" icon-plus"></a>
-                        <input type="file" name="file" id="upload_file">
+                        <input type="file" name="file" id="uploaderInput" class="weui-uploader__input" accept="image/*" multiple="">
                     </div>
                 </div>
             </div>
@@ -180,6 +179,14 @@
                     })
                 }
             })
+
+            //文件上传
+            var uploaderInput = document.getElementById('uploaderInput')
+            uploaderInput.addEventListener('change', function(){
+                var file = uploaderInput.files[0];
+                alert(file.size);
+            }, false)
+
         })
     </script>
 </body>

@@ -88,23 +88,29 @@
             display: block;
             margin-bottom: .625rem;
         }
-        #upload_file {
+        #uploaderInput {
             width: 6.25rem;
             height: 6.25rem;
             position: absolute;
             left: 0;
             top: 0;
-            display: none;
+            opacity: 0;
         }
     }
     .upload_case {
-        // border: .5px solid #ececec;
-        // border-bottom: .5px solid #ececec;
-        // padding: .625rem 0;
-        // border-radius: .625rem;
         .upload_file {
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
+            ul {
+                li {
+                    float: left;
+                    width: 5.25rem;
+                    height: 5.25rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
         a {
             display: inline-block;
@@ -398,14 +404,16 @@ section .register_btn {
         height: 2.1875rem;
         line-height: 2.1875rem;
         background-color: #fff6f6;
-        button {
+        a {
             width: 50%;
+            height: 1.875rem;
+            line-height: 1.875rem;
+            color: #fff;
+            display: block;
             border-radius: @borderRadius;
             margin: 0 .3125rem .3125rem;
             background-color: @counter-style;
-            a {
-                color: #fff;
-            }
+            text-align: center;
             &:last-child {
                 background-color: #ececec
             }
@@ -483,8 +491,7 @@ section .register_btn {
         background-color: #fff;
         .advice {
             background-color: @counter-style;
-            color: #fff;
-            // padding: 0 .625rem;
+            color: #fff; // padding: 0 .625rem;
             width: 3.125rem;
             box-sizing: border-box;
             text-align: center;
@@ -496,7 +503,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
-            h3{
+            h3 {
                 margin-top: .3125rem;
             }
             p {

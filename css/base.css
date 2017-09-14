@@ -91,6 +91,10 @@ textarea {
   resize: none;
   -webkit-appearance: none;
 }
+input[type=checkbox],
+input[type=radio] {
+  border: .0625rem solid #ccc;
+}
 ::-webkit-input-placeholder {
   color: #ccc;
   font-size: .625rem;
@@ -441,12 +445,6 @@ button {
   padding: .1875rem 0;
 }
 /* common */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-}
 .header .title {
   height: 1.875rem;
   line-height: 1.875rem;
@@ -466,7 +464,6 @@ button {
   color: #fff;
 }
 .content {
-  padding-top: 1.875rem;
   padding-bottom: 2.5rem;
   box-sizing: border-box;
 }
@@ -480,7 +477,7 @@ button {
   z-index: 9999;
 }
 .modal_content {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   background: rgba(255, 255, 255, 0.8);

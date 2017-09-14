@@ -77,17 +77,21 @@
   display: block;
   margin-bottom: .625rem;
 }
-.register div #upload_file {
+.register div #uploaderInput {
   width: 6.25rem;
   height: 6.25rem;
   position: absolute;
   left: 0;
   top: 0;
-  display: none;
+  opacity: 0;
 }
-.register .upload_case .upload_file {
-  display: flex;
-  justify-content: center;
+.register .upload_case .upload_file ul li {
+  float: left;
+  width: 5.25rem;
+  height: 5.25rem;
+}
+.register .upload_case .upload_file ul li img {
+  width: 100%;
 }
 .register .upload_case a {
   display: inline-block;
@@ -332,16 +336,18 @@ section .register_btn {
   line-height: 2.1875rem;
   background-color: #fff6f6;
 }
-.btn_footer .btn_bottom button {
+.btn_footer .btn_bottom a {
   width: 50%;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  color: #fff;
+  display: block;
   border-radius: 0.3125rem;
   margin: 0 .3125rem .3125rem;
   background-color: #FFB6C1;
+  text-align: center;
 }
-.btn_footer .btn_bottom button a {
-  color: #fff;
-}
-.btn_footer .btn_bottom button:last-child {
+.btn_footer .btn_bottom a:last-child {
   background-color: #ececec;
 }
 /* 患者端复诊情况 */
