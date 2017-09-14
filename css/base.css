@@ -84,6 +84,7 @@ input,
 textarea {
   font-size: .75rem;
   margin: 0;
+  font-family: "Helvetica" !important;
 }
 input[type=text],
 input[type=password],
@@ -483,4 +484,16 @@ button {
   background: rgba(255, 255, 255, 0.8);
   z-index: 99999;
   transform: translate(-50%, -50%);
+}
+.weui-loadmore {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  border-radius: 0.3125rem;
+  padding: 1.25rem .9375rem;
+  box-sizing: border-box;
+  width: auto !important;
 }

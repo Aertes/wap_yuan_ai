@@ -78,29 +78,32 @@
   margin-bottom: .625rem;
 }
 .register div #uploaderInput {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 5.25rem;
+  height: 5.25rem;
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
+  padding: 0;
 }
 .register .upload_case .upload_file ul li {
+  position: relative;
   float: left;
   width: 5.25rem;
   height: 5.25rem;
+  border: 1px solid #ececec;
+  text-align: center;
 }
-.register .upload_case .upload_file ul li img {
-  width: 100%;
-}
-.register .upload_case a {
-  display: inline-block;
+.register .upload_case .upload_file ul li i.icon-trash {
   position: absolute;
-  font-size: 1.55rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ececec;
+  top: .375rem;
+  right: .375rem;
+  color: red;
+  font-size: 1rem;
+}
+.register .upload_case .weui-uploader__input-box {
+  width: 5.25rem;
+  height: 5.25rem;
 }
 .register .upload_case .upload_ {
   width: 100%;
@@ -448,6 +451,14 @@ section .register_btn {
   padding-bottom: 6.25rem;
   box-sizing: border-box;
 }
+.title a {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 1.875rem;
+  height: 1.875rem;
+}
 .content_chat .content_text {
   box-sizing: border-box;
   border-bottom: none;
@@ -560,11 +571,9 @@ section .register_btn {
   padding: .3125rem .625rem;
   box-sizing: border-box;
   border-bottom: .5px solid #ececec;
+  background: #fff;
 }
-.footer_chat .chat_member .file_download p {
-  line-height: 1.25rem;
-}
-.footer_chat .chat_member .file_download button {
+.footer_chat .chat_member .file_download a {
   padding: .3125rem .625rem;
   background-color: #FFB6C1;
   text-align: center;
@@ -572,8 +581,29 @@ section .register_btn {
   border-radius: 0.3125rem;
   color: #fff;
 }
-.footer_chat .chat_member .member {
+.footer_chat .chat_member .preview {
+  width: 40%;
+  text-align: right;
+}
+/* 患者端用户列表 */
+.content_user_scoll .content_user ul {
   display: flex;
-  padding: .625rem;
+  flex-wrap: wrap;
+}
+.content_user_scoll .content_user ul li {
+  width: 3.4375rem;
+  margin: .625rem;
+}
+.content_user_scoll .content_user ul li p {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 .3125rem;
   box-sizing: border-box;
+}
+.content_user_scoll .content_user ul li img {
+  box-shadow: .3125rem .3125rem .3125rem #ececec;
+  border-radius: 0.3125rem;
+  width: 100%;
 }
