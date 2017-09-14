@@ -137,6 +137,13 @@ button {
   margin: 0;
   outline-style: none;
 }
+::-webkit-scrollbar {
+  width: .1875rem;
+  height: 18.75rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
 /*去掉input等聚焦时的蓝色边框*/
 .col-red {
   color: #C81623!important;

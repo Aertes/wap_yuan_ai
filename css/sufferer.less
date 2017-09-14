@@ -505,8 +505,8 @@ section .register_btn {
 /* 患者端即时通讯 */
 
 .content_chat_scoll {
-    padding-top: 1.875rem;
-    padding-bottom: 6.25rem;
+    // padding-top: 1.875rem;
+    padding-bottom: 3.75rem;
     box-sizing: border-box;
 }
 
@@ -526,8 +526,8 @@ section .register_btn {
         margin: .3125rem;
         margin-bottom: 0;
         padding: .625rem;
-        div {
-            margin: .3125rem 0;
+        .info {
+            margin: .625rem 0;
             a {
                 border: .5px solid #ececec;
                 box-sizing: border-box;
@@ -539,7 +539,7 @@ section .register_btn {
                 width: 1.875rem;
             }
             span {
-                max-width: 60%;
+                max-width: 70%;
                 font-size: .6875rem;
                 border-radius: @borderRadius;
                 background-color: #b2e281;
@@ -568,18 +568,28 @@ section .register_btn {
                     position: absolute;
                     top: 50%;
                     left: -.6rem;
-                    transform: translateY(-50%)
+                    transform: translateY(-50%);
                 }
             }
         }
         .left_text {
             display: flex;
             justify-content: flex-start;
-            span {
-                text-align: left;
-                margin-left: .3125rem;
-                background-color: #fff;
-                border: 1px solid #f5f0f0;
+            .info_text {
+                max-width: 70%;
+                span {
+                    text-align: left;
+                    margin-left: .3125rem;
+                    background-color: #fff;
+                    border: 1px solid #f5f0f0; // padding: .625rem;
+                    display: block;
+                    max-width: 100%;
+                }
+                p {
+                    padding-left: .625rem;
+                    padding-bottom: .1875rem;
+                    font-size: .65rem;
+                }
             }
             a {
                 &:before {
@@ -591,10 +601,48 @@ section .register_btn {
                     border-right: .625rem solid #fff;
                     border-bottom: .3125rem solid transparent;
                     position: absolute;
-                    top: 50%;
+                    bottom: 0;
                     right: -.7rem;
-                    transform: translateY(-50%)
                 }
+            }
+            .song {
+                margin: 0;
+                width: 50%;
+                background: #fff;
+                border-radius: 0.3125rem;
+                border: 1px solid #f5f0f0;
+                margin-left: 2.3rem;
+                position: absolute;
+                padding: 1rem 0;
+                bottom: 0;
+                .icon-rss:before {
+                    transform: rotateZ(45deg);
+                }
+                .icon-rss {
+                    position: absolute;
+                    top: 50%;
+                    left: .9375rem;
+                    transform: translateY(-50%);
+                }
+                span {
+                    position: absolute;
+                    right: -1rem;
+                    padding: 0;
+                    margin: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: initial;
+                    border: none;
+                }
+            }
+        }
+        .yu {
+            display: block;
+            height: 3.2rem;
+            position: relative;
+            label {
+                position: absolute;
+                margin-left: .625rem;
             }
         }
     }
@@ -662,14 +710,14 @@ section .register_btn {
 /* 患者端用户列表 */
 
 .content_user_scoll {
-    .content_user{
-        ul{
+    .content_user {
+        ul {
             display: flex;
             flex-wrap: wrap;
-            li{
+            li {
                 width: 3.4375rem;
-                margin: .625rem;
-                p{
+                margin: .6rem;
+                p {
                     text-align: center;
                     overflow: hidden;
                     white-space: nowrap;
@@ -677,7 +725,7 @@ section .register_btn {
                     padding: 0 .3125rem;
                     box-sizing: border-box;
                 }
-                img{
+                img {
                     box-shadow: .3125rem .3125rem .3125rem #ececec;
                     border-radius: @borderRadius;
                     width: 100%;

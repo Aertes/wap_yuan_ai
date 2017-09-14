@@ -447,8 +447,7 @@ section .register_btn {
 }
 /* 患者端即时通讯 */
 .content_chat_scoll {
-  padding-top: 1.875rem;
-  padding-bottom: 6.25rem;
+  padding-bottom: 3.75rem;
   box-sizing: border-box;
 }
 .title a {
@@ -466,21 +465,21 @@ section .register_btn {
   margin-bottom: 0;
   padding: .625rem;
 }
-.content_chat .content_text div {
-  margin: .3125rem 0;
+.content_chat .content_text .info {
+  margin: .625rem 0;
 }
-.content_chat .content_text div a {
+.content_chat .content_text .info a {
   border: .5px solid #ececec;
   box-sizing: border-box;
   position: relative;
   display: inline-table;
 }
-.content_chat .content_text div img {
+.content_chat .content_text .info img {
   height: 1.875rem;
   width: 1.875rem;
 }
-.content_chat .content_text div span {
-  max-width: 60%;
+.content_chat .content_text .info span {
+  max-width: 70%;
   font-size: .6875rem;
   border-radius: 0.3125rem;
   background-color: #b2e281;
@@ -514,11 +513,21 @@ section .register_btn {
   display: flex;
   justify-content: flex-start;
 }
-.content_chat .content_text .left_text span {
+.content_chat .content_text .left_text .info_text {
+  max-width: 70%;
+}
+.content_chat .content_text .left_text .info_text span {
   text-align: left;
   margin-left: .3125rem;
   background-color: #fff;
   border: 1px solid #f5f0f0;
+  display: block;
+  max-width: 100%;
+}
+.content_chat .content_text .left_text .info_text p {
+  padding-left: .625rem;
+  padding-bottom: .1875rem;
+  font-size: .65rem;
 }
 .content_chat .content_text .left_text a:before {
   content: '';
@@ -529,9 +538,47 @@ section .register_btn {
   border-right: .625rem solid #fff;
   border-bottom: .3125rem solid transparent;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   right: -0.7rem;
+}
+.content_chat .content_text .left_text .song {
+  margin: 0;
+  width: 50%;
+  background: #fff;
+  border-radius: 0.3125rem;
+  border: 1px solid #f5f0f0;
+  margin-left: 2.3rem;
+  position: absolute;
+  padding: 1rem 0;
+  bottom: 0;
+}
+.content_chat .content_text .left_text .song .icon-rss:before {
+  transform: rotateZ(45deg);
+}
+.content_chat .content_text .left_text .song .icon-rss {
+  position: absolute;
+  top: 50%;
+  left: .9375rem;
   transform: translateY(-50%);
+}
+.content_chat .content_text .left_text .song span {
+  position: absolute;
+  right: -1rem;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: initial;
+  border: none;
+}
+.content_chat .content_text .yu {
+  display: block;
+  height: 3.2rem;
+  position: relative;
+}
+.content_chat .content_text .yu label {
+  position: absolute;
+  margin-left: .625rem;
 }
 .footer_chat {
   position: fixed;
@@ -592,7 +639,7 @@ section .register_btn {
 }
 .content_user_scoll .content_user ul li {
   width: 3.4375rem;
-  margin: .625rem;
+  margin: .6rem;
 }
 .content_user_scoll .content_user ul li p {
   text-align: center;
