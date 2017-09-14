@@ -82,7 +82,7 @@ acronym {
 input {
     padding-top: 0;
     padding-bottom: 0;
-    font-family: "SimSun", "宋体";
+    font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
 }
 
 select,
@@ -95,11 +95,20 @@ input,
 textarea {
     font-size: .75rem;
     margin: 0;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    resize: none;
     -webkit-appearance: none;
 }
 
-textarea {
-    resize: none;
+::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: .625rem;
+    // line-height: 1.875rem;
+    font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
 }
 
 
@@ -118,9 +127,9 @@ table {
 }
 
 body {
-    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    font: 12px/150% "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
     color: #666;
-    background: #ffe9ec
+    background: #fff6f6
 }
 
 a {
@@ -605,7 +614,7 @@ button {
 }
 
 .modal_content {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     background: rgba(255, 255, 255, 0.8);

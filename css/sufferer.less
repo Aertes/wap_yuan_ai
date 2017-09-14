@@ -6,9 +6,9 @@
 .logo {
     text-align: center;
     width: 6.25rem;
-    margin: auto; // margin-top: 1.25rem;
+    margin: 2.5rem auto; // margin-top: 1.25rem;
     img {
-        width: 100%;
+        width: 70%;
     }
 }
 
@@ -20,7 +20,7 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .0625rem solid #ececec;
+            border: .5px solid #ececec;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
@@ -32,7 +32,7 @@
         }
         .add-on {
             position: absolute;
-            line-height: 1.88rem;
+            line-height: 1.8rem;
             width: 1.5625rem;
             text-align: center;
             background: @counter-style;
@@ -41,18 +41,20 @@
             border-bottom-left-radius: @borderRadius;
         }
     }
-    .forgot_password {
-        text-align: right;
-        a {
-            width: 100%;
-            margin: auto;
-        }
+}
+
+.forgot_password {
+    text-align: right;
+    margin: .625rem 1.25rem;
+    a {
+        width: 100%;
+        margin: auto;
     }
 }
 
 .register_btn,
 .login_btn {
-    margin: 1.25rem;
+    margin: 1.25rem 1.25rem 0;
     button {
         width: 100%;
         height: 1.875rem;
@@ -64,7 +66,7 @@
 
 .login_modal_content {
     text-align: center;
-    color: @counter-style;
+    color: #666;
     border-radius: @borderRadius;
     padding: 1.25rem .9375rem;
     box-sizing: border-box;
@@ -73,13 +75,18 @@
 
 /* 患者端注册 */
 
+.icon-mobile-phone {
+    font-size: .875rem;
+}
+
 .register {
     padding: .625rem;
     div {
         position: relative;
         label {
-            font-size: .65rem;
+            font-size: .75rem;
             display: block;
+            margin-bottom: .625rem;
         }
         #upload_file {
             width: 6.25rem;
@@ -91,46 +98,63 @@
         }
     }
     .upload_case {
+        // border: .5px solid #ececec;
+        // border-bottom: .5px solid #ececec;
+        // padding: .625rem 0;
+        // border-radius: .625rem;
+        .upload_file {
+            display: flex;
+            justify-content: center;
+        }
         a {
-            width: 6.25rem;
-            height: 6.25rem;
             display: inline-block;
-            position: relative;
-            border: .125rem dotted #ececec;
-            box-sizing: border-box;
-            &::before {
-                content: '';
-                position: absolute;
-                width: .3125rem;
-                height: 3.75rem;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #ececec;
-                border-radius: @borderRadius;
-            }
-            &::after {
-                content: '';
-                width: 3.75rem;
-                height: .3125rem;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #ececec;
-                border-radius: @borderRadius;
-            }
+            position: absolute;
+            font-size: 1.55rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ececec; // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: .3125rem;
+            //     height: 2.75rem;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     background-color: #ececec;
+            //     border-radius: @borderRadius;
+            // }
+            // &::after {
+            //     content: '';
+            //     width: 2.75rem;
+            //     height: .3125rem;
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     background-color: #ececec;
+            //     border-radius: @borderRadius;
+            // }
+        }
+        .upload_ {
+            width: 100%;
         }
         .upload_btn {
-            float: left;
-            overflow: hidden;
+            // overflow: hidden;
+            // margin: .625rem;
+            // padding: .625rem .625rem 0 .625rem;
+            width: 5.25rem;
+            height: 5.25rem;
+            margin: auto .3125rem;
+            border: .125rem dotted #ececec;
+            box-sizing: border-box;
+            position: relative;
         }
         .upload_img {
-            float: left;
             overflow: hidden;
-            width: 6.25rem;
-            height: 6.25rem;
-            margin-right: .625rem;
+            width: 5.25rem;
+            height: 5.25rem;
+            margin: auto .3125rem;
             padding: .625rem;
             box-sizing: border-box;
             border: .125rem dotted #ececec;
@@ -144,7 +168,7 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .0625rem solid #ececec;
+            border: .5px solid #ececec;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
@@ -167,7 +191,7 @@
             width: 100%;
             padding: .3125rem;
             box-sizing: border-box;
-            border: .0625rem solid #ececec;
+            border: .5px solid #ececec;
         }
         p {
             text-align: right;
@@ -176,6 +200,10 @@
     }
     .surgery_checked {
         padding-right: 1.25rem;
+        font-size: .6875rem;
+    }
+    .non_surgical_checked {
+        font-size: .6875rem;
     }
 }
 
@@ -189,32 +217,47 @@ section .register_btn {
 .content_detail {
     box-sizing: border-box;
     ul>li {
-        border-bottom: 1px solid #ececec;
+        border-bottom: .5px solid #ececec;
         padding: .625rem;
+        display: flex;
         span {
             &:first-child {
                 width: 33%;
                 text-align: left;
-                display: inline-block;
+                display: flex;
+                font-weight: bold;
+                color: #000;
+                justify-content: space-between;
             }
             &:last-child {
                 width: 65%;
                 text-align: left;
                 display: inline-block;
+                padding-left: .625rem;
+                box-sizing: border-box;
             }
         }
         .w {
             padding: 0;
+            display: flex;
+            width: 33%;
+            justify-content: space-between;
         }
         textarea {
             width: 100%;
             padding: .3125rem;
             box-sizing: border-box;
             border: none;
+            margin-top: .625rem;
         }
     }
     p {
         padding: .625rem;
+        font-weight: bold;
+        color: #000;
+        width: 33%;
+        display: flex;
+        justify-content: space-between;
     }
     .sufferer_img {
         text-align: center;
@@ -244,7 +287,7 @@ section .register_btn {
     margin: .625rem;
     ul {
         padding: .625rem 0;
-        border-bottom: .0625rem solid #ececec;
+        border-bottom: .5px solid #ececec;
         box-sizing: border-box;
         li {
             &:first-child {
@@ -264,8 +307,8 @@ section .register_btn {
                         text-align: center;
                     }
                     &:last-child {
-                        color: #096;
-                        font-size: .75rem;
+                        color: #000;
+                        font-size: .65rem;
                     }
                 }
             }
@@ -274,14 +317,14 @@ section .register_btn {
                     background-color: #5c9cb7;
                 }
                 &:last-child {
-                    color: #5c9cb7;
-                    font-size: .75rem;
+                    color: #000;
+                    font-size: .65rem;
                 }
             }
             .content_text {
                 display: flex;
                 font-size: .625rem;
-                p{
+                p {
                     width: 100%;
                     padding: .3125rem .625rem;
                     box-sizing: border-box;
@@ -301,7 +344,7 @@ section .register_btn {
                     background-color: @counter-style;
                     color: #fff;
                     display: inline-block;
-                    text-align: center; // float: right;
+                    text-align: center;
                 }
             }
         }
@@ -316,12 +359,29 @@ section .register_btn {
         ul {
             margin: .625rem;
             li {
-                padding: .625rem 0;
+                padding: .625rem 0; // height: 1.875rem;
+                // line-height: 1.875rem;
                 box-sizing: border-box;
-                border-bottom: .0625rem solid #ececec;
+                border-bottom: .5px solid #ececec;
+                position: relative;
                 a {
                     display: flex;
                     justify-content: space-between;
+                    color: #000;
+                }
+                span {
+                    &:last-child {
+                        font-size: .58rem;
+                        color: #000;
+                    }
+                    &:first-child {
+                        width: 70%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
                 }
             }
         }
@@ -337,7 +397,7 @@ section .register_btn {
         justify-content: center;
         height: 2.1875rem;
         line-height: 2.1875rem;
-        background-color: #ffe9ec;
+        background-color: #fff6f6;
         button {
             width: 50%;
             border-radius: @borderRadius;
@@ -363,7 +423,7 @@ section .register_btn {
         display: flex;
         padding: .625rem 0;
         box-sizing: border-box;
-        border-bottom: .0625rem solid #ececec;
+        border-bottom: .5px solid #ececec;
         line-height: .8125rem;
         label {
             display: block;
@@ -378,7 +438,7 @@ section .register_btn {
     }
     .radio_input {
         box-sizing: border-box;
-        border-bottom: .0625rem solid #ececec;
+        border-bottom: .5px solid #ececec;
         padding-bottom: .625rem;
         span {
             margin-right: .625rem;
@@ -392,7 +452,8 @@ section .register_btn {
         }
         textarea {
             width: 100%;
-            border: .0625rem solid #ececec;
+            border: .5px solid #ececec;
+            margin: .625rem 0;
         }
     }
     .vist_progress {
@@ -423,7 +484,8 @@ section .register_btn {
         .advice {
             background-color: @counter-style;
             color: #fff;
-            padding: 0 .625rem;
+            // padding: 0 .625rem;
+            width: 3.125rem;
             box-sizing: border-box;
             text-align: center;
             p {
@@ -434,6 +496,9 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
+            h3{
+                margin-top: .3125rem;
+            }
             p {
                 font-size: .625rem;
             }
@@ -468,7 +533,7 @@ section .register_btn {
         div {
             margin: .3125rem 0;
             a {
-                border: .0625rem solid #ececec;
+                border: .5px solid #ececec;
                 box-sizing: border-box;
                 position: relative;
                 display: inline-table;
@@ -578,7 +643,7 @@ section .register_btn {
             justify-content: space-between;
             padding: .3125rem .625rem;
             box-sizing: border-box;
-            border-bottom: .0625rem solid #ececec;
+            border-bottom: .5px solid #ececec;
             p {
                 line-height: 1.25rem;
             }

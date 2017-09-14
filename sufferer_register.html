@@ -21,7 +21,7 @@
             <h1 class="f14">患者注册</h1>
         </div>
     </header>
-    <section class="content">
+    <section class="content" style="padding-bottom:0">
         <section>
             <div class="logo w">
                 <img src="./images/logo.png" alt="">
@@ -29,7 +29,8 @@
         </section>
         <form class="register" id="formRegister">
             <div class="username input_text">
-                <label for="" style="font-size:11px">为了使您更好的参与上课讨论，请您填写以下信息：</label>
+                <label for="">请您填写以下信息</label>
+                
                 <span class="add-on"><i class="icon-user"></i></span>
                 <input type="text" name="username" placeholder="请输入姓名">
             </div>
@@ -41,48 +42,48 @@
                 <span class="add-on"><i class="icon-plus-sign-alt"></i></span>
                 <input type="text" name="patientNumber" placeholder="请输入门诊号">
             </div>
-            <div class="upload_case">
+            <div class="upload_case input_text">
                 <label for="">上传病例</label>
                 <div class="upload_file clearfix">
-                    <div class="upload_img">
+                    <div class="upload_img odd">
                         <img src="./images/error.gif" alt="">
                     </div>
-                    <div class="upload_img">
+                    <div class="upload_img even">
                         <img src="./images/error.gif" alt="">
                     </div>
                     <div class="upload_btn">
-                        <a href="javascript:;"></a>
+                        <a href="javascript:;" class=" icon-plus"></a>
                         <input type="file" name="file" id="upload_file">
                     </div>
                 </div>
             </div>
             <div class="phone input_text">
-                <label for="">验证手机号（注：作为系统登录用户名）</label>
-                <span class="add-on"><i class="icon-mobile-phone"></i></span>
+                <!-- <label for="">验证手机号（注：作为系统登录用户名）</label> -->
+                <span class="add-on"><i class="icon-phone"></i></span>
                 <input type="text" name="phone" placeholder="请输入手机号">
             </div>
             <div class="password input_text">
-                <label for="">密码</label>
+                <!-- <label for="">密码</label> -->
                 <span class="add-on"><i class="icon-lock"></i></span>
                 <input type="password" name="password" placeholder="请输入密码">
+            </div>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class="icon-barcode"></i></span>
+                <input type="text" name="code" placeholder="邀请码">
             </div>
             <div class="surgery">
                 <label for="">现阶段治疗方法</label>
                 <div class="radio">
-                    <input type="radio" name="surgery" checked='checked' value="0">
+                    <input class="mybox" type="radio" name="surgery" checked='checked' value="1" onclick="checkBox($(this))">
                     <span class="surgery_checked">手术</span>
-                    <input type="radio" name="non_surgical">
+                    <input class="mybox" type="radio" name="non_surgical" onclick="checkBox($(this))">
                     <span class="non_surgical_checked">非手术</span>
                 </div>
             </div>
             <div class="medical_history">
                 <textarea name="medical_history" id="medical_history" rows="10" placeholder="病例病史："></textarea>
                 <p>字数不能超过100字</p>
-            </div>
-            <div class="code input_text">
-                <label for="">推荐码</label>
-                <span class="add-on"><i class="icon-barcode"></i></span>
-                <input type="text" name="code" placeholder="邀请码">
             </div>
             <div class="informed_consent">
                 <input id="informed_consent" type="checkbox" name="informed_consent" checked value="1">
@@ -96,7 +97,12 @@
     <div class="bg_model none"></div>
     <div class="modal_content none login_modal_content"></div>
     <script>
-        
+        function checkBox(obj) {
+                if (obj.is(":checked")) {
+                    $('input.mybox').prop('checked', false).val(0);
+                    obj.prop('checked', true).val(1);
+                }
+            }
         $(function () {
             var flag = true;            
             $(document).delegate('.surgery_checked', 'click', function(){
