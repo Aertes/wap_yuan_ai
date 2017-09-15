@@ -88,53 +88,39 @@
             display: block;
             margin-bottom: .625rem;
         }
-        #upload_file {
-            width: 6.25rem;
-            height: 6.25rem;
+        #uploaderInput {
+            width: 5.25rem;
+            height: 5.25rem;
             position: absolute;
             left: 0;
             top: 0;
-            display: none;
+            opacity: 0;
+            padding: 0;
         }
     }
     .upload_case {
-        // border: .5px solid #ececec;
-        // border-bottom: .5px solid #ececec;
-        // padding: .625rem 0;
-        // border-radius: .625rem;
         .upload_file {
-            display: flex;
-            justify-content: center;
+            ul {
+                li {
+                    position: relative;
+                    float: left;
+                    width: 5.25rem;
+                    height: 5.25rem;
+                    border: 1px solid #ececec;
+                    text-align: center;
+                    i.icon-trash {
+                        position: absolute;
+                        top: .375rem;
+                        right: .375rem;
+                        color: red;
+                        font-size: 1rem;
+                    }
+                }
+            }
         }
-        a {
-            display: inline-block;
-            position: absolute;
-            font-size: 1.55rem;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #ececec; // &::before {
-            //     content: '';
-            //     position: absolute;
-            //     width: .3125rem;
-            //     height: 2.75rem;
-            //     top: 50%;
-            //     left: 50%;
-            //     transform: translate(-50%, -50%);
-            //     background-color: #ececec;
-            //     border-radius: @borderRadius;
-            // }
-            // &::after {
-            //     content: '';
-            //     width: 2.75rem;
-            //     height: .3125rem;
-            //     position: absolute;
-            //     top: 50%;
-            //     left: 50%;
-            //     transform: translate(-50%, -50%);
-            //     background-color: #ececec;
-            //     border-radius: @borderRadius;
-            // }
+        .weui-uploader__input-box {
+            width: 5.25rem;
+            height: 5.25rem;
         }
         .upload_ {
             width: 100%;
@@ -398,14 +384,16 @@ section .register_btn {
         height: 2.1875rem;
         line-height: 2.1875rem;
         background-color: #fff6f6;
-        button {
+        a {
             width: 50%;
+            height: 1.875rem;
+            line-height: 1.875rem;
+            color: #fff;
+            display: block;
             border-radius: @borderRadius;
             margin: 0 .3125rem .3125rem;
             background-color: @counter-style;
-            a {
-                color: #fff;
-            }
+            text-align: center;
             &:last-child {
                 background-color: #ececec
             }
@@ -483,8 +471,7 @@ section .register_btn {
         background-color: #fff;
         .advice {
             background-color: @counter-style;
-            color: #fff;
-            // padding: 0 .625rem;
+            color: #fff; // padding: 0 .625rem;
             width: 3.125rem;
             box-sizing: border-box;
             text-align: center;
@@ -496,7 +483,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
-            h3{
+            h3 {
                 margin-top: .3125rem;
             }
             p {
@@ -518,9 +505,18 @@ section .register_btn {
 /* 患者端即时通讯 */
 
 .content_chat_scoll {
-    padding-top: 1.875rem;
-    padding-bottom: 6.25rem;
+    // padding-top: 1.875rem;
+    padding-bottom: 3.75rem;
     box-sizing: border-box;
+}
+
+.title a {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
 .content_chat {
@@ -530,8 +526,8 @@ section .register_btn {
         margin: .3125rem;
         margin-bottom: 0;
         padding: .625rem;
-        div {
-            margin: .3125rem 0;
+        .info {
+            margin: .625rem 0;
             a {
                 border: .5px solid #ececec;
                 box-sizing: border-box;
@@ -543,7 +539,7 @@ section .register_btn {
                 width: 1.875rem;
             }
             span {
-                max-width: 60%;
+                max-width: 70%;
                 font-size: .6875rem;
                 border-radius: @borderRadius;
                 background-color: #b2e281;
@@ -572,18 +568,28 @@ section .register_btn {
                     position: absolute;
                     top: 50%;
                     left: -.6rem;
-                    transform: translateY(-50%)
+                    transform: translateY(-50%);
                 }
             }
         }
         .left_text {
             display: flex;
             justify-content: flex-start;
-            span {
-                text-align: left;
-                margin-left: .3125rem;
-                background-color: #fff;
-                border: 1px solid #f5f0f0;
+            .info_text {
+                max-width: 70%;
+                span {
+                    text-align: left;
+                    margin-left: .3125rem;
+                    background-color: #fff;
+                    border: 1px solid #f5f0f0; // padding: .625rem;
+                    display: block;
+                    max-width: 100%;
+                }
+                p {
+                    padding-left: .625rem;
+                    padding-bottom: .1875rem;
+                    font-size: 13px;
+                }
             }
             a {
                 &:before {
@@ -595,10 +601,49 @@ section .register_btn {
                     border-right: .625rem solid #fff;
                     border-bottom: .3125rem solid transparent;
                     position: absolute;
-                    top: 50%;
+                    bottom: 0;
                     right: -.7rem;
-                    transform: translateY(-50%)
                 }
+            }
+            .song {
+                margin: 0;
+                width: 50%;
+                background: #fff;
+                border-radius: 0.3125rem;
+                border: 1px solid #f5f0f0;
+                margin-left: 2.3rem;
+                position: absolute;
+                padding: 1rem 0;
+                bottom: 0;
+                .icon-rss:before {
+                    transform: rotateZ(45deg);
+                }
+                .icon-rss {
+                    position: absolute;
+                    top: 50%;
+                    left: .9375rem;
+                    transform: translateY(-50%);
+                }
+                span {
+                    position: absolute;
+                    right: -1rem;
+                    padding: 0;
+                    margin: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: initial;
+                    border: none;
+                }
+            }
+        }
+        .yu {
+            display: block;
+            height: 3.2rem;
+            position: relative;
+            label {
+                position: absolute;
+                margin-left: .625rem;
+                font-size: 13px;
             }
         }
     }
@@ -644,10 +689,8 @@ section .register_btn {
             padding: .3125rem .625rem;
             box-sizing: border-box;
             border-bottom: .5px solid #ececec;
-            p {
-                line-height: 1.25rem;
-            }
-            button {
+            background: #fff;
+            a {
                 padding: .3125rem .625rem;
                 background-color: @counter-style;
                 text-align: center;
@@ -656,10 +699,41 @@ section .register_btn {
                 color: #fff;
             }
         }
-        .member {
+        .preview {
+            width: 40%;
+            text-align: right;
+        }
+        .preview_PDF {}
+    }
+}
+
+
+/* 患者端用户列表 */
+
+.content_user_scoll {
+    .content_user {
+        ul {
             display: flex;
-            padding: .625rem;
-            box-sizing: border-box;
+            flex-wrap: wrap;
+            li {
+                width: 3.4375rem;
+                margin: .6rem;
+                p {
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding: 0 .3125rem;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    padding-top: 5px;
+                }
+                img {
+                    box-shadow: .3125rem .3125rem .3125rem #ececec;
+                    border-radius: @borderRadius;
+                    width: 100%;
+                }
+            }
         }
     }
 }

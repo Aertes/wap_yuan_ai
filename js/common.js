@@ -14,3 +14,11 @@ function checkPhone() {
     }
     return true;
 }
+
+$('input').bind('focus', function () {
+    $('.header').css('position', 'static');
+    //或者$('#viewport').height($(window).height()+'px');  
+}).bind('blur', function () {
+    $('.header').css({ 'position': 'fixed', 'top': '0' });
+    //或者$('#viewport').height('auto');  
+});

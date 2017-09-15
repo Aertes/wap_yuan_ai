@@ -95,6 +95,7 @@ input,
 textarea {
     font-size: .75rem;
     margin: 0;
+    font-family: "Helvetica" !important;
 }
 
 input[type=text],
@@ -104,10 +105,14 @@ textarea {
     -webkit-appearance: none;
 }
 
+input[type=checkbox],
+input[type=radio] {
+    border: .0625rem solid #ccc;
+}
+
 ::-webkit-input-placeholder {
     color: #ccc;
-    font-size: .625rem;
-    // line-height: 1.875rem;
+    font-size: .625rem; // line-height: 1.875rem;
     font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
 }
 
@@ -158,6 +163,14 @@ button {
     outline-style: none;
 }
 
+::-webkit-scrollbar {
+    width: .1875rem;
+    height: 18.75rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
 
 /*去掉input等聚焦时的蓝色边框*/
 
@@ -572,10 +585,10 @@ button {
 
 // 头部
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // z-index: 999;
     .title {
         height: 1.875rem;
         line-height: 1.875rem;
@@ -597,7 +610,7 @@ button {
 }
 
 .content {
-    padding-top: 1.875rem;
+    // padding-top: 1.875rem;
     padding-bottom: 2.5rem;
     box-sizing: border-box;
 }
@@ -620,4 +633,17 @@ button {
     background: rgba(255, 255, 255, 0.8);
     z-index: 99999;
     transform: translate(-50%, -50%);
+}
+
+.weui-loadmore {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    border-radius: 0.3125rem;
+    padding: 1.25rem .9375rem;
+    box-sizing: border-box;
+    width: auto !important;
 }
