@@ -527,7 +527,7 @@ section .register_btn {
 .content_chat .content_text .left_text .info_text p {
   padding-left: .625rem;
   padding-bottom: .1875rem;
-  font-size: .65rem;
+  font-size: 13px;
 }
 .content_chat .content_text .left_text a:before {
   content: '';
@@ -579,6 +579,7 @@ section .register_btn {
 .content_chat .content_text .yu label {
   position: absolute;
   margin-left: .625rem;
+  font-size: 13px;
 }
 .footer_chat {
   position: fixed;
@@ -648,6 +649,8 @@ section .register_btn {
   text-overflow: ellipsis;
   padding: 0 .3125rem;
   box-sizing: border-box;
+  font-size: 12px;
+  padding-top: 5px;
 }
 .content_user_scoll .content_user ul li img {
   box-shadow: .3125rem .3125rem .3125rem #ececec;
