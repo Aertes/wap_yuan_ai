@@ -27,7 +27,7 @@
 }
 .login div .add-on {
   position: absolute;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
   width: 1.5625rem;
   text-align: center;
   background: #FFB6C1;
@@ -142,7 +142,7 @@
 }
 .register .input_text .add-on {
   position: absolute;
-  line-height: 1.88rem;
+  line-height: 1.9rem;
   width: 1.5625rem;
   text-align: center;
   background: #FFB6C1;

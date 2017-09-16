@@ -113,7 +113,8 @@ table {
 body {
   font: 12px/150% "Helvetica", "Neue", "Helvetica", "Microsoft YaHei";
   color: #666;
-  background: #fff6f6;
+  background: url("../images/timg (1).jpg") 0 0 no-repeat;
+  background-size: cover;
 }
 a {
   color: #666;
