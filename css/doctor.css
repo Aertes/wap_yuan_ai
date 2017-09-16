@@ -1,4 +1,4 @@
-/* 患者端登录 */
+/* 医生端登录 */
 .logo {
   text-align: center;
   width: 6.25rem;
@@ -63,7 +63,7 @@
   padding: 1.25rem .9375rem;
   box-sizing: border-box;
 }
-/* 患者端注册 */
+/* 医生端注册 */
 .icon-mobile-phone {
   font-size: .875rem;
 }
@@ -177,7 +177,7 @@
 section .register_btn {
   margin: 1.25rem .625rem;
 }
-/* 患者端详情 */
+/* 医生端详情 */
 .content_detail {
   box-sizing: border-box;
 }
@@ -226,7 +226,7 @@ section .register_btn {
 .content_detail .sufferer_img img {
   width: 80%;
 }
-/* 患者端答教 */
+/* 医生端答教 */
 .chat,
 .vist,
 .quiz {
@@ -375,7 +375,7 @@ section .register_btn {
   padding: .1875rem;
   font-size: .65rem;
 }
-/* 患者端关爱讲堂 */
+/* 医生端关爱讲堂 */
 .content .content_classroom ul {
   margin: .625rem;
 }
@@ -458,7 +458,7 @@ section .register_btn {
 .btn_footer .btn_bottom a:last-child {
   background-color: #efdbdb;
 }
-/* 患者端复诊情况 */
+/* 医生端复诊情况 */
 .content_vist {
   margin: .625rem;
 }
@@ -574,7 +574,7 @@ section .register_btn {
 .footer_vist .content_info ul li span {
   font-size: .625rem;
 }
-/* 患者端即时通讯 */
+/* 医生端即时通讯 */
 .content_chat_scoll {
   padding-top: 1.875rem;
   padding-bottom: 4.75rem;
@@ -782,7 +782,7 @@ section .register_btn {
   width: 40%;
   text-align: right;
 }
-/* 患者端用户列表 */
+/* 医生端用户列表 */
 .content_user_scoll {
   padding-top: 1.875rem;
   box-sizing: border-box;
