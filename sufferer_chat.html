@@ -164,31 +164,8 @@
             //预览pdf
             $(document).delegate('#preview', 'click', function () {
                 $('#container').fadeToggle();
-                //showPdf();
             })
-            function showPdf() {
-                var container = document.getElementById("container");
-                container.style.display = "block";
-                var url = './images/寇云《Vue.js开发企业级 Web app》.pdf';
-                PDFJS.workerSrc = './js/pdf.worker.js';
-                PDFJS.getDocument(url).then(function getPdfHelloWorld(pdf) {
-                    pdf.getPage(1).then(function getPageHelloWorld(page) {
-                        var scale = 1;
-                        var viewport = page.getViewport(scale);
-                        var canvas = document.getElementById('the-canvas');
-                        var context = canvas.getContext('2d');
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
-                        var renderContext = {
-                            canvasContext: context,
-                            viewport: viewport
-                        };
-                        page.render(renderContext);
-                    });
-                });
-            }
-
-
+            
             //发送消息
             $(document).delegate('#send_chat', 'click', function () {
                 var html = '';
