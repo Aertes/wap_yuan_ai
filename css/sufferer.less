@@ -1,5 +1,6 @@
 @counter-style: #FFB6C1;
 @borderRadius: .3125rem;
+@backOpcity: rgba(0, 0, 0, 0.1);
 
 /* 患者端登录 */
 
@@ -20,12 +21,12 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
             box-sizing: border-box;
-            background: rgba(0, 0, 0, 0.1);
+            background: @backOpcity;
         }
         p {
             width: 100%;
@@ -82,13 +83,14 @@
 
 .register {
     padding: .625rem;
-    div {
+    label {
+        font-size: .75rem;
+        display: block;
+        margin-bottom: .3125rem;
+    }
+    .upload_file {
         position: relative;
-        label {
-            font-size: .75rem;
-            display: block;
-            margin-bottom: .625rem;
-        }
+        background: #f6edf0;
         #uploaderInput {
             width: 5.25rem;
             height: 5.25rem;
@@ -107,7 +109,7 @@
                     float: left;
                     width: 5.25rem;
                     height: 5.25rem;
-                    border: 1px solid #ececec;
+                    border: 1px solid #efdbdb;
                     text-align: center;
                     i.icon-trash {
                         position: absolute;
@@ -133,7 +135,7 @@
             width: 5.25rem;
             height: 5.25rem;
             margin: auto .3125rem;
-            border: .125rem dotted #ececec;
+            border: .125rem dotted #efdbdb;
             box-sizing: border-box;
             position: relative;
         }
@@ -144,7 +146,7 @@
             margin: auto .3125rem;
             padding: .625rem;
             box-sizing: border-box;
-            border: .125rem dotted #ececec;
+            border: .125rem dotted #efdbdb;
             img {
                 width: 100%;
             }
@@ -155,11 +157,12 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
             box-sizing: border-box;
+            background: @backOpcity;
         }
         .add-on {
             position: absolute;
@@ -178,7 +181,8 @@
             width: 100%;
             padding: .3125rem;
             box-sizing: border-box;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
+            background: @backOpcity
         }
         p {
             text-align: right;
@@ -204,7 +208,7 @@ section .register_btn {
 .content_detail {
     box-sizing: border-box;
     ul>li {
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         padding: .625rem;
         display: flex;
         span {
@@ -271,11 +275,11 @@ section .register_btn {
 .content_quiz {
     margin: .625rem 0;
     ul {
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         box-sizing: border-box;
         li {
             margin: .625rem;
-            background: #fff;
+            background: rgba(255, 255, 255, .6);
             padding: .3125rem .625rem;
             border-radius: @borderRadius;
             box-sizing: border-box;
@@ -395,7 +399,7 @@ section .register_btn {
         padding: .625rem;
         input {
             width: 100%;
-            border: .5px solid #ececec;
+            border: .5px solid #efdbdb;
             padding: .28rem;
         }
         a {
@@ -423,7 +427,7 @@ section .register_btn {
                 padding: .625rem 0; // height: 1.875rem;
                 // line-height: 1.875rem;
                 box-sizing: border-box;
-                border-bottom: .5px solid #ececec;
+                border-bottom: .5px solid #efdbdb;
                 position: relative;
                 a {
                     display: flex;
@@ -447,6 +451,41 @@ section .register_btn {
             }
         }
     }
+    .content_classroom_details {
+        .detail_title {
+            text-align: center;
+            margin: .625rem;
+        }
+        .username_log {
+            .log_img {
+                margin: auto;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: .5px solid @backOpcity;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 100%;
+                }
+            }
+            .auther_time {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    margin: .625rem;
+                }
+            }
+        }
+        .detail_content{
+            padding: .625rem 1.25rem;
+            box-sizing: border-box;
+            p{
+                text-indent: 2em;
+            }
+        }
+    }
 }
 
 .btn_footer {
@@ -458,7 +497,6 @@ section .register_btn {
         justify-content: center;
         height: 2.1875rem;
         line-height: 2.1875rem;
-        background-color: #fff6f6;
         a {
             width: 50%;
             height: 1.875rem;
@@ -470,7 +508,7 @@ section .register_btn {
             background-color: @counter-style;
             text-align: center;
             &:last-child {
-                background-color: #ececec
+                background-color: #efdbdb
             }
         }
     }
@@ -486,7 +524,7 @@ section .register_btn {
         display: flex;
         padding: .625rem 0;
         box-sizing: border-box;
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         line-height: .8125rem;
         label {
             display: block;
@@ -501,7 +539,7 @@ section .register_btn {
     }
     .radio_input {
         box-sizing: border-box;
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         padding-bottom: .625rem;
         span {
             margin-right: .625rem;
@@ -515,8 +553,9 @@ section .register_btn {
         }
         textarea {
             width: 100%;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             margin: .625rem 0;
+            background: @backOpcity;
         }
     }
     .vist_progress {
@@ -544,8 +583,8 @@ section .register_btn {
         height: 2.5rem;
         display: flex;
         box-sizing: border-box;
-        background-color: #fff;
-        border-bottom: .5px solid #ececec;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-bottom: .5px solid @backOpcity;
         .advice {
             background-color: @counter-style;
             color: #fff; // padding: 0 .625rem;
@@ -560,6 +599,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
+            background: @backOpcity;
             h3 {
                 margin-top: .3125rem;
             }
@@ -577,13 +617,13 @@ section .register_btn {
         }
     }
     .content_info {
-        background: #fff;
+        background: rgba(255, 255, 255, .6);
         height: 5.5rem;
         ul {
             padding: .625rem;
             li {
                 padding: .3125rem .3125rem;
-                border-bottom: .5px solid #ececec;
+                border-bottom: .5px solid rgba(255, 255, 255, .6);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -602,12 +642,12 @@ section .register_btn {
 /* 患者端即时通讯 */
 
 .content_chat_scoll {
-    // padding-top: 1.875rem;
+    padding-top: 1.875rem;
     padding-bottom: 4.75rem;
     box-sizing: border-box;
     .preview_pdf {
         .preview_pdf_title {
-            border: .5px solid #ececec;
+            border: .5px solid #efdbdb;
             background: @counter-style;
             p {
                 text-align: center;
@@ -641,7 +681,7 @@ section .register_btn {
         .info {
             margin: .625rem 0;
             a {
-                border: .5px solid #ececec;
+                border: .5px solid #efdbdb;
                 box-sizing: border-box;
                 position: relative;
                 display: inline-table;
@@ -793,7 +833,7 @@ section .register_btn {
                 height: 1.5625rem;
                 padding: .3125rem;
                 box-sizing: border-box;
-                border: 1px solid #ececec;
+                border: 1px solid #efdbdb;
                 border-radius: .1875rem;
             }
         }
@@ -804,7 +844,7 @@ section .register_btn {
             justify-content: space-between;
             padding: .3125rem .625rem;
             box-sizing: border-box;
-            border-bottom: .5px solid #ececec;
+            border-bottom: .5px solid #efdbdb;
             background: #fff;
             a {
                 padding: .3125rem .625rem;
@@ -826,6 +866,8 @@ section .register_btn {
 /* 患者端用户列表 */
 
 .content_user_scoll {
+    padding-top: 1.875rem; //padding-bottom: 4.75rem;
+    box-sizing: border-box;
     .content_user {
         ul {
             display: flex;
@@ -844,13 +886,13 @@ section .register_btn {
                     padding-top: 5px;
                 }
                 img {
-                    box-shadow: .3125rem .3125rem .3125rem #ececec;
+                    box-shadow: .3125rem .3125rem .3125rem #efdbdb;
                     border-radius: @borderRadius;
                     width: 100%;
-                    box-shadow: -.3125rem 0 3125rem #ececec, /*左边阴影*/
-                    .3125rem 0 .3125rem #ececec, /*右边阴影*/
-                    0 -.3125rem .3125rem #ececec, /*顶部阴影*/
-                    0 .3125rem .3125rem #ececec;
+                    box-shadow: -.3125rem 0 3125rem #efdbdb, /*左边阴影*/
+                    .3125rem 0 .3125rem #efdbdb, /*右边阴影*/
+                    0 -.3125rem .3125rem #efdbdb, /*顶部阴影*/
+                    0 .3125rem .3125rem #efdbdb;
                     /*底边阴影*/
                 }
             }
