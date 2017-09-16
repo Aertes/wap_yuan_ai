@@ -538,7 +538,7 @@ section .register_btn {
 
 .footer_vist {
     position: fixed;
-    bottom: 0;
+    bottom: -5.5rem;
     width: 100%;
     z-index: 99999;
     .doctor_advice {
@@ -579,10 +579,21 @@ section .register_btn {
     }
     .content_info {
         background: #fff;
+        height: 5.5rem;
         ul {
             padding: .625rem;
             li {
-                
+                padding: .3125rem .3125rem;
+                border-bottom: .5px solid #ececec;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:last-child {
+                    border-bottom: none;
+                }
+                span {
+                    font-size: .625rem;
+                }
             }
         }
     }
