@@ -1,5 +1,6 @@
 @counter-style: #FFB6C1;
 @borderRadius: .3125rem;
+@backOpcity: rgba(0, 0, 0, 0.1);
 
 /* 患者端登录 */
 
@@ -20,11 +21,12 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
             box-sizing: border-box;
+            background: @backOpcity;
         }
         p {
             width: 100%;
@@ -32,7 +34,7 @@
         }
         .add-on {
             position: absolute;
-            line-height: 1.8rem;
+            line-height: 1.9rem;
             width: 1.5625rem;
             text-align: center;
             background: @counter-style;
@@ -81,13 +83,14 @@
 
 .register {
     padding: .625rem;
-    div {
+    label {
+        font-size: .75rem;
+        display: block;
+        margin-bottom: .3125rem;
+    }
+    .upload_file {
         position: relative;
-        label {
-            font-size: .75rem;
-            display: block;
-            margin-bottom: .625rem;
-        }
+        background: #f6edf0;
         #uploaderInput {
             width: 5.25rem;
             height: 5.25rem;
@@ -106,7 +109,7 @@
                     float: left;
                     width: 5.25rem;
                     height: 5.25rem;
-                    border: 1px solid #ececec;
+                    border: 1px solid #efdbdb;
                     text-align: center;
                     i.icon-trash {
                         position: absolute;
@@ -132,7 +135,7 @@
             width: 5.25rem;
             height: 5.25rem;
             margin: auto .3125rem;
-            border: .125rem dotted #ececec;
+            border: .125rem dotted #efdbdb;
             box-sizing: border-box;
             position: relative;
         }
@@ -143,7 +146,7 @@
             margin: auto .3125rem;
             padding: .625rem;
             box-sizing: border-box;
-            border: .125rem dotted #ececec;
+            border: .125rem dotted #efdbdb;
             img {
                 width: 100%;
             }
@@ -154,15 +157,16 @@
         input {
             width: 100%;
             height: 1.875rem;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             border-radius: @borderRadius;
             padding-left: 1.875rem;
             padding-right: .625rem;
             box-sizing: border-box;
+            background: @backOpcity;
         }
         .add-on {
             position: absolute;
-            line-height: 1.88rem;
+            line-height: 1.9rem;
             width: 1.5625rem;
             text-align: center;
             background: @counter-style;
@@ -177,7 +181,8 @@
             width: 100%;
             padding: .3125rem;
             box-sizing: border-box;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
+            background: @backOpcity
         }
         p {
             text-align: right;
@@ -203,15 +208,14 @@ section .register_btn {
 .content_detail {
     box-sizing: border-box;
     ul>li {
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         padding: .625rem;
         display: flex;
         span {
             &:first-child {
                 width: 33%;
                 text-align: left;
-                display: flex;
-                font-weight: bold;
+                display: flex; // font-weight: bold;
                 color: #000;
                 justify-content: space-between;
             }
@@ -238,8 +242,7 @@ section .register_btn {
         }
     }
     p {
-        padding: .625rem;
-        font-weight: bold;
+        padding: .625rem; // font-weight: bold;
         color: #000;
         width: 33%;
         display: flex;
@@ -270,30 +273,66 @@ section .register_btn {
 }
 
 .content_quiz {
-    margin: .625rem;
+    margin: .625rem 0;
     ul {
-        padding: .625rem 0;
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         box-sizing: border-box;
         li {
-            &:first-child {
-                margin-bottom: .625rem;
-            }
-            .doctor_reply,
+            margin: .625rem;
+            background: rgba(255, 255, 255, .6);
+            padding: .3125rem .625rem;
+            border-radius: @borderRadius;
+            box-sizing: border-box;
             .aq_preson {
                 padding: .3125rem 0;
+                .aq_preson_username {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
                 span {
                     &:first-child {
-                        width: 1.875rem;
-                        height: 1.875rem;
-                        line-height: 1.875rem;
-                        background-color: #096;
+                        padding: 0 .3125rem;
+                        box-sizing: border-box;
+                        background-color: #fd435f;
                         color: #fff;
                         display: inline-block;
                         text-align: center;
+                        border-radius: .1875rem;
+                        font-size: .65rem;
                     }
                     &:last-child {
-                        color: #000;
+                        color: #969696;
+                        font-size: .65rem;
+                    }
+                }
+            }
+            .doctor_reply {
+                padding: .3125rem 0;
+                .aq_reply {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .doctor_name_reply {
+                        span {
+                            &:first-child {
+                                padding: 0 .3125rem;
+                                box-sizing: border-box;
+                                background-color: #5c9cb7;
+                                color: #fff;
+                                display: inline-block;
+                                text-align: center;
+                                border-radius: .1875rem;
+                                font-size: .65rem;
+                            }
+                            &:last-child {
+                                color: #969696;
+                                font-size: .65rem;
+                            }
+                        }
+                    }
+                    .doctor {
+                        color: #969696;
                         font-size: .65rem;
                     }
                 }
@@ -308,31 +347,71 @@ section .register_btn {
                 }
             }
             .content_text {
-                display: flex;
                 font-size: .625rem;
                 p {
                     width: 100%;
-                    padding: .3125rem .625rem;
                     box-sizing: border-box;
+                    color: #000;
+                    padding: .625rem 0;
                 }
             }
-            .content_text>span {
-                &:first-child {
-                    width: 87%;
-                    display: block;
-                    padding: 0 .625rem;
-                    box-sizing: border-box;
+            .reply_text {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                font-size: .625rem;
+                color: #000;
+                p {
+                    padding: .625rem 0;
                 }
-                &:last-child {
-                    width: 1.875rem;
-                    height: 1.875rem;
-                    line-height: 1.875rem;
+                .ask {
+                    color: #fff;
+                    background: @counter-style;
+                    padding: .3125rem;
+                }
+            }
+            .ask {
+                text-align: right;
+                button {
+                    padding: .125rem .3125rem;
+                    box-sizing: border-box;
                     background-color: @counter-style;
                     color: #fff;
                     display: inline-block;
                     text-align: center;
+                    border-radius: .1875rem;
+                    font-size: .65rem;
                 }
             }
+        }
+    }
+}
+
+.footer_aq {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff6f6;
+    .reply_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .625rem;
+        input {
+            width: 100%;
+            border: .5px solid #efdbdb;
+            padding: .28rem;
+        }
+        a {
+            margin-left: .625rem;
+            display: inline-block;
+            width: 2rem;
+            text-align: center;
+            background: @counter-style;
+            border-radius: @borderRadius;
+            color: #fff;
+            padding: .1875rem;
+            font-size: .65rem;
         }
     }
 }
@@ -348,7 +427,7 @@ section .register_btn {
                 padding: .625rem 0; // height: 1.875rem;
                 // line-height: 1.875rem;
                 box-sizing: border-box;
-                border-bottom: .5px solid #ececec;
+                border-bottom: .5px solid #efdbdb;
                 position: relative;
                 a {
                     display: flex;
@@ -372,6 +451,41 @@ section .register_btn {
             }
         }
     }
+    .content_classroom_details {
+        .detail_title {
+            text-align: center;
+            margin: .625rem;
+        }
+        .username_log {
+            .log_img {
+                margin: auto;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: .5px solid @backOpcity;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 100%;
+                }
+            }
+            .auther_time {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    margin: .625rem;
+                }
+            }
+        }
+        .detail_content {
+            padding: .625rem 1.25rem;
+            box-sizing: border-box;
+            p {
+                text-indent: 2em;
+            }
+        }
+    }
 }
 
 .btn_footer {
@@ -383,7 +497,6 @@ section .register_btn {
         justify-content: center;
         height: 2.1875rem;
         line-height: 2.1875rem;
-        background-color: #fff6f6;
         a {
             width: 50%;
             height: 1.875rem;
@@ -395,7 +508,7 @@ section .register_btn {
             background-color: @counter-style;
             text-align: center;
             &:last-child {
-                background-color: #ececec
+                background-color: #efdbdb
             }
         }
     }
@@ -411,7 +524,7 @@ section .register_btn {
         display: flex;
         padding: .625rem 0;
         box-sizing: border-box;
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         line-height: .8125rem;
         label {
             display: block;
@@ -426,7 +539,7 @@ section .register_btn {
     }
     .radio_input {
         box-sizing: border-box;
-        border-bottom: .5px solid #ececec;
+        border-bottom: .5px solid #efdbdb;
         padding-bottom: .625rem;
         span {
             margin-right: .625rem;
@@ -440,8 +553,9 @@ section .register_btn {
         }
         textarea {
             width: 100%;
-            border: .5px solid #ececec;
+            border: .5px solid @backOpcity;
             margin: .625rem 0;
+            background: @backOpcity;
         }
     }
     .vist_progress {
@@ -462,13 +576,15 @@ section .register_btn {
 
 .footer_vist {
     position: fixed;
-    bottom: 0;
+    bottom: -5.5rem;
     width: 100%;
+    z-index: 99999;
     .doctor_advice {
         height: 2.5rem;
         display: flex;
         box-sizing: border-box;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-bottom: .5px solid @backOpcity;
         .advice {
             background-color: @counter-style;
             color: #fff; // padding: 0 .625rem;
@@ -483,6 +599,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
+            background: @backOpcity;
             h3 {
                 margin-top: .3125rem;
             }
@@ -499,15 +616,50 @@ section .register_btn {
             }
         }
     }
+    .content_info {
+        background: rgba(255, 255, 255, .6);
+        height: 5.5rem;
+        ul {
+            padding: .625rem;
+            li {
+                padding: .3125rem .3125rem;
+                border-bottom: .5px solid rgba(255, 255, 255, .6);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:last-child {
+                    border-bottom: none;
+                }
+                span {
+                    font-size: .625rem;
+                }
+            }
+        }
+    }
 }
 
 
 /* 患者端即时通讯 */
 
 .content_chat_scoll {
-    // padding-top: 1.875rem;
-    padding-bottom: 3.75rem;
+    padding-top: 1.875rem;
+    padding-bottom: 4.75rem;
     box-sizing: border-box;
+    .preview_pdf {
+        .preview_pdf_title {
+            border: .5px solid #efdbdb;
+            background: @counter-style;
+            p {
+                text-align: center;
+                padding: .625rem 0;
+                color: #fff;
+            }
+        }
+        #pop iframe {
+            width: 100%;
+            height: 31.25rem;
+        }
+    }
 }
 
 .title a {
@@ -529,7 +681,7 @@ section .register_btn {
         .info {
             margin: .625rem 0;
             a {
-                border: .5px solid #ececec;
+                border: .5px solid #efdbdb;
                 box-sizing: border-box;
                 position: relative;
                 display: inline-table;
@@ -660,24 +812,28 @@ section .register_btn {
         padding: .3125rem .625rem;
         box-sizing: border-box;
         background: #f1f1f1;
+        align-items: center;
         .button {
-            button {
-                padding: .3125rem .625rem;
+            margin-left: .625rem;
+            a {
                 background-color: @counter-style;
                 text-align: center;
                 box-sizing: border-box;
                 border-radius: @borderRadius;
                 color: #fff;
+                width: 2.5rem;
+                padding: .15rem 0;
+                display: inline-block;
             }
         }
         .input {
-            width: 80%;
+            width: 100%;
             input {
                 width: 100%;
                 height: 1.5625rem;
                 padding: .3125rem;
                 box-sizing: border-box;
-                border: 1px solid #ececec;
+                border: 1px solid #efdbdb;
                 border-radius: .1875rem;
             }
         }
@@ -688,7 +844,7 @@ section .register_btn {
             justify-content: space-between;
             padding: .3125rem .625rem;
             box-sizing: border-box;
-            border-bottom: .5px solid #ececec;
+            border-bottom: .5px solid #efdbdb;
             background: #fff;
             a {
                 padding: .3125rem .625rem;
@@ -703,7 +859,6 @@ section .register_btn {
             width: 40%;
             text-align: right;
         }
-        .preview_PDF {}
     }
 }
 
@@ -711,6 +866,8 @@ section .register_btn {
 /* 患者端用户列表 */
 
 .content_user_scoll {
+    padding-top: 1.875rem; //padding-bottom: 4.75rem;
+    box-sizing: border-box;
     .content_user {
         ul {
             display: flex;
@@ -729,9 +886,13 @@ section .register_btn {
                     padding-top: 5px;
                 }
                 img {
-                    box-shadow: .3125rem .3125rem .3125rem #ececec;
                     border-radius: @borderRadius;
                     width: 100%;
+                    box-shadow: -.3125rem 0 3125rem @backOpcity, /*左边阴影*/
+                    .3125rem 0 .3125rem @backOpcity, /*右边阴影*/
+                    0 -.3125rem .3125rem @backOpcity, /*顶部阴影*/
+                    0 .3125rem .3125rem @backOpcity;
+                    /*底边阴影*/
                 }
             }
         }
