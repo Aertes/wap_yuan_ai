@@ -424,11 +424,13 @@ section .register_btn {
         ul {
             margin: .625rem;
             li {
-                padding: .625rem 0; // height: 1.875rem;
-                // line-height: 1.875rem;
+                padding: .625rem 0;
                 box-sizing: border-box;
                 border-bottom: .5px solid #efdbdb;
                 position: relative;
+                &:last-child {
+                    border-bottom: none;
+                }
                 a {
                     display: flex;
                     justify-content: space-between;

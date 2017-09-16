@@ -385,6 +385,9 @@ section .register_btn {
   border-bottom: .5px solid #efdbdb;
   position: relative;
 }
+.content .content_classroom ul li:last-child {
+  border-bottom: none;
+}
 .content .content_classroom ul li a {
   display: flex;
   justify-content: space-between;
