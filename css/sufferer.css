@@ -545,6 +545,15 @@ section .register_btn {
   padding-bottom: 4.75rem;
   box-sizing: border-box;
 }
+.content_chat_scoll .preview_pdf .preview_pdf_title {
+  border: .5px solid #ececec;
+  background: #FFB6C1;
+}
+.content_chat_scoll .preview_pdf .preview_pdf_title p {
+  text-align: center;
+  padding: .625rem 0;
+  color: #fff;
+}
 .title a {
   display: inline-block;
   position: absolute;
