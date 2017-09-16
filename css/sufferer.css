@@ -240,33 +240,65 @@ section .register_btn {
   border-radius: 0.3125rem;
 }
 .content_quiz {
-  margin: .625rem;
+  margin: .625rem 0;
 }
 .content_quiz ul {
-  padding: .625rem 0;
   border-bottom: .5px solid #ececec;
   box-sizing: border-box;
 }
-.content_quiz ul li:first-child {
-  margin-bottom: .625rem;
+.content_quiz ul li {
+  margin: .625rem;
+  background: #fff;
+  padding: .3125rem .625rem;
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
 }
-.content_quiz ul li .doctor_reply,
 .content_quiz ul li .aq_preson {
   padding: .3125rem 0;
 }
-.content_quiz ul li .doctor_reply span:first-child,
+.content_quiz ul li .aq_preson .aq_preson_username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .content_quiz ul li .aq_preson span:first-child {
-  width: 1.875rem;
-  height: 1.875rem;
-  line-height: 1.875rem;
-  background-color: #096;
+  padding: 0 .3125rem;
+  box-sizing: border-box;
+  background-color: #fd435f;
   color: #fff;
   display: inline-block;
   text-align: center;
+  border-radius: .1875rem;
+  font-size: .65rem;
 }
-.content_quiz ul li .doctor_reply span:last-child,
 .content_quiz ul li .aq_preson span:last-child {
-  color: #000;
+  color: #969696;
+  font-size: .65rem;
+}
+.content_quiz ul li .doctor_reply {
+  padding: .3125rem 0;
+}
+.content_quiz ul li .doctor_reply .aq_reply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content_quiz ul li .doctor_reply .aq_reply .doctor_name_reply span:first-child {
+  padding: 0 .3125rem;
+  box-sizing: border-box;
+  background-color: #5c9cb7;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: .1875rem;
+  font-size: .65rem;
+}
+.content_quiz ul li .doctor_reply .aq_reply .doctor_name_reply span:last-child {
+  color: #969696;
+  font-size: .65rem;
+}
+.content_quiz ul li .doctor_reply .aq_reply .doctor {
+  color: #969696;
   font-size: .65rem;
 }
 .content_quiz ul li .doctor_reply > span:first-child {
@@ -277,28 +309,69 @@ section .register_btn {
   font-size: .65rem;
 }
 .content_quiz ul li .content_text {
-  display: flex;
   font-size: .625rem;
 }
 .content_quiz ul li .content_text p {
   width: 100%;
-  padding: .3125rem .625rem;
   box-sizing: border-box;
+  color: #000;
+  padding: .625rem 0;
 }
-.content_quiz ul li .content_text > span:first-child {
-  width: 87%;
-  display: block;
-  padding: 0 .625rem;
+.content_quiz ul li .reply_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: .625rem;
+  color: #000;
+}
+.content_quiz ul li .reply_text p {
+  padding: .625rem 0;
+}
+.content_quiz ul li .reply_text .ask {
+  color: #fff;
+  background: #FFB6C1;
+  padding: .3125rem;
+}
+.content_quiz ul li .ask {
+  text-align: right;
+}
+.content_quiz ul li .ask button {
+  padding: .125rem .3125rem;
   box-sizing: border-box;
-}
-.content_quiz ul li .content_text > span:last-child {
-  width: 1.875rem;
-  height: 1.875rem;
-  line-height: 1.875rem;
   background-color: #FFB6C1;
   color: #fff;
   display: inline-block;
   text-align: center;
+  border-radius: .1875rem;
+  font-size: .65rem;
+}
+.footer_aq {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff6f6;
+}
+.footer_aq .reply_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .625rem;
+}
+.footer_aq .reply_content input {
+  width: 100%;
+  border: .5px solid #ececec;
+  padding: .28rem;
+}
+.footer_aq .reply_content a {
+  margin-left: .625rem;
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+  background: #FFB6C1;
+  border-radius: 0.3125rem;
+  color: #fff;
+  padding: .1875rem;
+  font-size: .65rem;
 }
 /* 患者端关爱讲堂 */
 .content .content_classroom ul {
@@ -409,12 +482,14 @@ section .register_btn {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 99999;
 }
 .footer_vist .doctor_advice {
   height: 2.5rem;
   display: flex;
   box-sizing: border-box;
   background-color: #fff;
+  border-bottom: .5px solid #ececec;
 }
 .footer_vist .doctor_advice .advice {
   background-color: #FFB6C1;
@@ -444,6 +519,12 @@ section .register_btn {
   right: 1.25rem;
   font-size: 1.5625rem;
   color: #FFB6C1;
+}
+.footer_vist .content_info {
+  background: #fff;
+}
+.footer_vist .content_info ul {
+  padding: .625rem;
 }
 /* 患者端即时通讯 */
 .content_chat_scoll {
@@ -593,17 +674,23 @@ section .register_btn {
   padding: .3125rem .625rem;
   box-sizing: border-box;
   background: #f1f1f1;
+  align-items: center;
 }
-.footer_chat .send .button button {
-  padding: .3125rem .625rem;
+.footer_chat .send .button {
+  margin-left: .625rem;
+}
+.footer_chat .send .button a {
   background-color: #FFB6C1;
   text-align: center;
   box-sizing: border-box;
   border-radius: 0.3125rem;
   color: #fff;
+  width: 2.5rem;
+  padding: .15rem 0;
+  display: inline-block;
 }
 .footer_chat .send .input {
-  width: 80%;
+  width: 100%;
 }
 .footer_chat .send .input input {
   width: 100%;

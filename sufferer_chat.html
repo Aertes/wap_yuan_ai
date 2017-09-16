@@ -128,7 +128,7 @@
                 <input type="text" name="content">
             </div>
             <div class="button">
-                <button>发送</button>
+                <a id="send_chat">发送</a>
             </div>
         </div>
         <div class="chat_member">
@@ -218,8 +218,38 @@
 
     <script>
         $(function () {
-            $(document).delegate('.icon-zoom-in', 'click', function () {
-                $('.preview_PDF').show();
+            $(document).delegate('#send_chat', 'click', function () {
+                var html = '';
+                var sendContent = $('input[name=content]').val();
+                if (sendContent == '') {
+                    return;
+                } else {
+                    $.ajax({
+                        url: '',
+                        type: 'post',
+                        data: sendContent,
+                        dataType: 'text',
+                        beforeSend: function () {
+                            $('.weui-loadmore').show();
+                            $('.bg_model').show();
+                        },
+                        success: function (info) {
+                            if (info.type == "success") {
+                                $('.weui-loadmore').hide();
+                                $('.bg_model').hide();
+                                html = '<div class="right_text  info">' +
+                                            '<span>患者问题的萨阿阿大啊患者问题的萨阿阿大啊</span>' +
+                                            '<a href="#"><img src="./images/error.gif" alt=""></a>' +
+                                        '</div>'
+                                $('.content_text').append(html);
+                            } else {
+                                // $('.bg_model').fadeIn();
+                                // $('.modal_content').fadeIn().text(data.message);
+                                // timer();
+                            }
+                        }
+                    })
+                }
 
             })
         })

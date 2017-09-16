@@ -28,51 +28,88 @@
             <ul>
                 <li>
                     <div class="aq_preson">
-                        <span>提问</span>
-                        <span class="username">王豆豆&nbsp;2012-12-22</span>
+                        <div class="aq_preson_username">
+                            <div class="username_aq">
+                                <span>问</span>
+                                <span>王豆豆</span>
+                            </div>
+                            <span class="username">2012/02/22&nbsp;08:23:23</span>
+                        </div>
+                        <div class="content_text">
+                            <p>提问的问题的测试test提问的问题的测试test提问的问题的测试test.......</p>
+                        </div>
                     </div>
-                    <div class="content_text">
-                        <p>提问的问题的测试test...............</p>
-                    </div>
-                </li>
-                <li>
                     <div class="doctor_reply">
-                        <span>回复</span>
-                        <span class="doctor">徐医生&nbsp;2012-12-23</span>
-                    </div>
-                    <div class="content_text clearfix">
-                        <span>多喝水多喝水多喝水多喝水</span>
-                        <span class="ask">追问</span>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <div class="aq_preson">
-                        <span>提问</span>
-                        <span class="username">王豆豆&nbsp;2012-12-22</span>
-                    </div>
-                    <div class="content_text">
-                        <p>提问的问题的测试test.......,,dsasdfgfsd</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="doctor_reply">
-                        <span>回复</span>
-                        <span class="doctor">徐医生&nbsp;2012-12-23</span>
-                    </div>
-                    <div class="content_text clearfix">
-                        <span>多喝水多喝水多喝水多喝斯蒂芬放松放防水电费等司法所电风扇电风扇电风扇电风扇地方守打法啥打法上f松水</span>
-                        <span class="ask">追问</span>
+                        <div class="aq_reply">
+                            <div class="doctor_name_reply">
+                                <span>答</span>
+                                <span>徐医生</span>
+                            </div>
+                            <span class="doctor">2012/02/22&nbsp;08:5:26</span>
+                        </div>
+                        <div class="clearfix reply_text">
+                            <p>快速健康撒娇了的卡的卡什么能否顺利开发拉卡就算了点解啊了</p>
+                        </div>
+                        <div class="ask">
+                            <button>追问</button>
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
+    <footer class="footer_aq none">
+        <div class="reply_content">
+            <input type="text" name="content">
+            <a href="javascript:;" id="send">发送</a>
+        </div>
+    </footer>
     <script>
         $(function () {
-            $(document).delegate('.ask', 'click', function(){
-                alert(1);
+            $(document).delegate('.ask button', 'click', function () {
+                $('.footer_aq').fadeToggle();
+            })
+            $(document).delegate('#send', 'click', function () {
+                var html = '';
+                var sendContent = $('input[name=content]').val();
+                if(sendContent == ''){
+                    return;
+                }else{
+                    $('.content_quiz ul li').append(html);
+                    $.ajax({
+                        url:'',
+                        type:'post',
+                        data: sendContent,
+                        dataType:'text',
+                        beforeSend:function(){
+                            $('.weui-loadmore').show();
+                            $('.bg_model').show();
+                        },
+                        success:function(info){
+                            if (info.type == "success") {
+                                $('.weui-loadmore').hide();
+                                $('.bg_model').hide();
+                                html = '<div class="aq_preson">'+
+                                            '< div class="aq_preson_username" >'+
+                                                '<div class="username_aq">'+
+                                                    '<span>问</span>'+
+                                                    '<span>王豆豆</span>'+
+                                                '</div>'+
+                                                '<span class="username">2012/02/22&nbsp;08:23:23</span>'+
+                                            '</div >'+
+                                            '<div class="content_text">'+
+                                                '<p>提问的问题的测试test提问的问题的测试test提问的问题的测试test.......</p>'+
+                                            '</div>'+
+                                        '</div >'
+                                $('.content_quiz ul li').append(html);
+                            } else {
+                                // $('.bg_model').fadeIn();
+                                // $('.modal_content').fadeIn().text(data.message);
+                                // timer();
+                            }
+                        }
+                    })
+                }
             })
         })
     </script>
