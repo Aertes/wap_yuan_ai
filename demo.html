@@ -1,64 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <style type="text/css">
-        .lightbox {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            width: 100%;
-            z-index: 7;
-            opacity: 0.3;
-            display: block;
-            background-color: rgb(0, 0, 0);
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/jquery-weui-build/lib/weui.min.css">
+    <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/sufferer.css">
+    <script src="./js/jquery-weui-build/lib/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui-build/js/jquery-weui.min.js"></script>
+    <script src="./js/common.js"></script>
+    <title>为什么患者不坚持用药？</title>
 
-        .pop {
-            position: absolute;
-            left: 50%;
-            width: 894px;
-            margin-left: -447px;
-            z-index: 9;
-        }
-    </style>
-    <script src="./js/pdf.js"></script>
-    <script src="./js/pdf.worker.js"></script>
-    <script type="text/javascript">
-        function showPdf() {
-            var container = document.getElementById("container");
-            container.style.display = "block";
-            var url = './寇云《Vue.js开发企业级 Web app》.pdf';
-            PDFJS.workerSrc = './js/pdf.worker.js';
-            PDFJS.getDocument(url).then(function getPdfHelloWorld(pdf) {
-                pdf.getPage(6).then(function getPageHelloWorld(page) {
-                    var scale = 1;
-                    var viewport = page.getViewport(scale);
-                    var canvas = document.getElementById('the-canvas');
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext);
-                });
-            });
-        }
-    </script>
 </head>
 
 <body>
-    <h1><a href="javascript:void(0)" target="_blank" onclick="showPdf()">显示pdf文档</a></h1>
-    <div id="container" style="display: none;">
-        <div class="lightbox"></div>
-        <div id="pop" class="pop">
-            <canvas id="the-canvas"></canvas>
+    <header class="header">
+        <div class="title">
+            <i class="icon-reply"></i>
+            <h1 class="f14">为什么患者不坚持用药？</h1>
         </div>
-    </div>
+    </header>
+    <section class="content">
+        <div class="content_classroom">
+            
+        </div>
+    </section>
 </body>
 
 </html>

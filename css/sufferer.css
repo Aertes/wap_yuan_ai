@@ -20,6 +20,7 @@
   padding-left: 1.875rem;
   padding-right: .625rem;
   box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
 }
 .login div p {
   width: 100%;
