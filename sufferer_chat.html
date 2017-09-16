@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./js/jquery-weui-build/lib/weui.min.css">
     <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
+    <!-- <link rel="stylesheet" href="./css/viewer.css"> -->
     <link rel="stylesheet" href="./css/sufferer.css">
     <script src="./js/jquery-weui-build/lib/jquery-2.1.4.js"></script>
     <script src="./js/jquery-weui-build/js/jquery-weui.min.js"></script>
+    <!-- <script src="./js/compatibility.js"></script> -->
+    <!-- <script src="./js/l10n.js"></script> -->
     <script src="./js/pdf.js"></script>
+    <script src="./js/pdf.worker.js"></script>
+    <!-- <script src="./js/viewer.js"></script> -->
     <script src="./js/common.js"></script>
     <title>在线讲堂</title>
 </head>
@@ -124,9 +129,13 @@
             <div class="preview_pdf_title">
                 <p>PDF文件预览</p>
             </div>
+            <!-- <div id="viewerContainer" tabindex="0">
+                <div id="viewer" class="pdfViewer"></div>
+            </div> -->
             <div class="lightbox"></div>
             <div id="pop" class="pop">
-                <canvas id="the-canvas"></canvas>
+                <iframe src="./js/pdf/web/viewer.html"></iframe>
+                <!-- <canvas id="the-canvas"></canvas> -->
             </div>
         </div>
     </section>
@@ -155,7 +164,7 @@
             //预览pdf
             $(document).delegate('#preview', 'click', function () {
                 $('#container').fadeToggle();
-                showPdf();
+                //showPdf();
             })
             function showPdf() {
                 var container = document.getElementById("container");
@@ -175,10 +184,11 @@
                             viewport: viewport
                         };
                         page.render(renderContext);
-
                     });
                 });
             }
+
+
             //发送消息
             $(document).delegate('#send_chat', 'click', function () {
                 var html = '';
