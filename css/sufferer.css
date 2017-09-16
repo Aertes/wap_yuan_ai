@@ -542,7 +542,7 @@ section .register_btn {
 }
 /* 患者端即时通讯 */
 .content_chat_scoll {
-  padding-bottom: 3.75rem;
+  padding-bottom: 4.75rem;
   box-sizing: border-box;
 }
 .title a {
