@@ -806,9 +806,8 @@ section .register_btn {
   padding-top: 5px;
 }
 .content_user_scoll .content_user ul li img {
-  box-shadow: .3125rem .3125rem .3125rem #efdbdb;
   border-radius: 0.3125rem;
   width: 100%;
-  box-shadow: -0.3125rem 0 3125rem #efdbdb, /*左边阴影*/ 0.3125rem 0 0.3125rem #efdbdb, /*右边阴影*/ 0 -0.3125rem 0.3125rem #efdbdb, /*顶部阴影*/ 0 0.3125rem 0.3125rem #efdbdb;
+  box-shadow: -0.3125rem 0 3125rem rgba(0, 0, 0, 0.1), /*左边阴影*/ 0.3125rem 0 0.3125rem rgba(0, 0, 0, 0.1), /*右边阴影*/ 0 -0.3125rem 0.3125rem rgba(0, 0, 0, 0.1), /*顶部阴影*/ 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1);
   /*底边阴影*/
 }
