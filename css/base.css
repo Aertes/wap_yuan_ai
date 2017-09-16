@@ -73,7 +73,7 @@ acronym {
 input {
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
+  font-family: "Helvetica", "Neue", "Helvetica", "Microsoft YaHei";
 }
 select,
 input {
@@ -99,7 +99,7 @@ input[type=radio] {
 ::-webkit-input-placeholder {
   color: #ccc;
   font-size: .625rem;
-  font-family: "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
+  font-family: "Helvetica", "Neue", "Helvetica", "Microsoft YaHei";
 }
 /*防止拖动*/
 img {
@@ -111,7 +111,7 @@ table {
   border-collapse: collapse;
 }
 body {
-  font: 12px/150% "Helvetica", "Neue", Helvetica, "Microsoft YaHei", "\\5FAE\8F6F\96C5\9ED1", Arial, sans-serif Arial, Verdana, "\5b8b\4f53";
+  font: 12px/150% "Helvetica", "Neue", "Helvetica", "Microsoft YaHei";
   color: #666;
   background: #fff6f6;
 }

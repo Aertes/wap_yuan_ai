@@ -234,7 +234,7 @@
             }, false);
 
             //删除图片文件
-            $(document).delegate('.icon-trash', 'click', function () {
+            $(document).delegate('li .icon-trash', 'click', function () {
                 var _this = $(this);
                 var data = _this.attr('dataId');
                 $.ajax({
