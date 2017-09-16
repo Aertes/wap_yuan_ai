@@ -1,0 +1,900 @@
+@counter-style: #FFB6C1;
+@borderRadius: .3125rem;
+@backOpcity: rgba(0, 0, 0, 0.1);
+
+/* 患者端登录 */
+
+.logo {
+    text-align: center;
+    width: 6.25rem;
+    margin: 2.5rem auto; // margin-top: 1.25rem;
+    img {
+        width: 70%;
+    }
+}
+
+.login {
+    div {
+        text-align: center;
+        margin: 1.25rem;
+        position: relative;
+        input {
+            width: 100%;
+            height: 1.875rem;
+            border: .5px solid @backOpcity;
+            border-radius: @borderRadius;
+            padding-left: 1.875rem;
+            padding-right: .625rem;
+            box-sizing: border-box;
+            background: @backOpcity;
+        }
+        p {
+            width: 100%;
+            margin: auto;
+        }
+        .add-on {
+            position: absolute;
+            line-height: 1.9rem;
+            width: 1.5625rem;
+            text-align: center;
+            background: @counter-style;
+            color: #fff;
+            border-top-left-radius: @borderRadius;
+            border-bottom-left-radius: @borderRadius;
+        }
+    }
+}
+
+.forgot_password {
+    text-align: right;
+    margin: .625rem 1.25rem;
+    a {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.register_btn,
+.login_btn {
+    margin: 1.25rem 1.25rem 0;
+    button {
+        width: 100%;
+        height: 1.875rem;
+        background-color: @counter-style;
+        color: #fff;
+        border-radius: @borderRadius;
+    }
+}
+
+.login_modal_content {
+    text-align: center;
+    color: #666;
+    border-radius: @borderRadius;
+    padding: 1.25rem .9375rem;
+    box-sizing: border-box;
+}
+
+
+/* 患者端注册 */
+
+.icon-mobile-phone {
+    font-size: .875rem;
+}
+
+.register {
+    padding: .625rem;
+    label {
+        font-size: .75rem;
+        display: block;
+        margin-bottom: .3125rem;
+    }
+    .upload_file {
+        position: relative;
+        background: #f6edf0;
+        #uploaderInput {
+            width: 5.25rem;
+            height: 5.25rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            padding: 0;
+        }
+    }
+    .upload_case {
+        .upload_file {
+            ul {
+                li {
+                    position: relative;
+                    float: left;
+                    width: 5.25rem;
+                    height: 5.25rem;
+                    border: 1px solid #efdbdb;
+                    text-align: center;
+                    i.icon-trash {
+                        position: absolute;
+                        top: .375rem;
+                        right: .375rem;
+                        color: red;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .weui-uploader__input-box {
+            width: 5.25rem;
+            height: 5.25rem;
+        }
+        .upload_ {
+            width: 100%;
+        }
+        .upload_btn {
+            // overflow: hidden;
+            // margin: .625rem;
+            // padding: .625rem .625rem 0 .625rem;
+            width: 5.25rem;
+            height: 5.25rem;
+            margin: auto .3125rem;
+            border: .125rem dotted #efdbdb;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .upload_img {
+            overflow: hidden;
+            width: 5.25rem;
+            height: 5.25rem;
+            margin: auto .3125rem;
+            padding: .625rem;
+            box-sizing: border-box;
+            border: .125rem dotted #efdbdb;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .input_text {
+        margin: .625rem 0;
+        input {
+            width: 100%;
+            height: 1.875rem;
+            border: .5px solid @backOpcity;
+            border-radius: @borderRadius;
+            padding-left: 1.875rem;
+            padding-right: .625rem;
+            box-sizing: border-box;
+            background: @backOpcity;
+        }
+        .add-on {
+            position: absolute;
+            line-height: 1.9rem;
+            width: 1.5625rem;
+            text-align: center;
+            background: @counter-style;
+            color: #fff;
+            border-top-left-radius: @borderRadius;
+            border-bottom-left-radius: @borderRadius;
+        }
+    }
+    .medical_history {
+        margin-top: .625rem;
+        textarea {
+            width: 100%;
+            padding: .3125rem;
+            box-sizing: border-box;
+            border: .5px solid @backOpcity;
+            background: @backOpcity
+        }
+        p {
+            text-align: right;
+            font-size: .625rem;
+        }
+    }
+    .surgery_checked {
+        padding-right: 1.25rem;
+        font-size: .6875rem;
+    }
+    .non_surgical_checked {
+        font-size: .6875rem;
+    }
+}
+
+section .register_btn {
+    margin: 1.25rem .625rem;
+}
+
+
+/* 患者端详情 */
+
+.content_detail {
+    box-sizing: border-box;
+    ul>li {
+        border-bottom: .5px solid #efdbdb;
+        padding: .625rem;
+        display: flex;
+        span {
+            &:first-child {
+                width: 33%;
+                text-align: left;
+                display: flex; // font-weight: bold;
+                color: #000;
+                justify-content: space-between;
+            }
+            &:last-child {
+                width: 65%;
+                text-align: left;
+                display: inline-block;
+                padding-left: .625rem;
+                box-sizing: border-box;
+            }
+        }
+        .w {
+            padding: 0;
+            display: flex;
+            width: 33%;
+            justify-content: space-between;
+        }
+        textarea {
+            width: 100%;
+            padding: .3125rem;
+            box-sizing: border-box;
+            border: none;
+            margin-top: .625rem;
+        }
+    }
+    p {
+        padding: .625rem; // font-weight: bold;
+        color: #000;
+        width: 33%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sufferer_img {
+        text-align: center;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+
+/* 患者端答教 */
+
+.chat,
+.vist,
+.quiz {
+    text-align: center;
+    margin: .625rem .3125rem;
+    h2 {
+        color: #fff;
+        background-color: @counter-style;
+        padding: .1875rem;
+        border-radius: @borderRadius;
+    }
+}
+
+.content_quiz {
+    margin: .625rem 0;
+    ul {
+        border-bottom: .5px solid #efdbdb;
+        box-sizing: border-box;
+        li {
+            margin: .625rem;
+            background: rgba(255, 255, 255, .6);
+            padding: .3125rem .625rem;
+            border-radius: @borderRadius;
+            box-sizing: border-box;
+            .aq_preson {
+                padding: .3125rem 0;
+                .aq_preson_username {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                span {
+                    &:first-child {
+                        padding: 0 .3125rem;
+                        box-sizing: border-box;
+                        background-color: #fd435f;
+                        color: #fff;
+                        display: inline-block;
+                        text-align: center;
+                        border-radius: .1875rem;
+                        font-size: .65rem;
+                    }
+                    &:last-child {
+                        color: #969696;
+                        font-size: .65rem;
+                    }
+                }
+            }
+            .doctor_reply {
+                padding: .3125rem 0;
+                .aq_reply {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .doctor_name_reply {
+                        span {
+                            &:first-child {
+                                padding: 0 .3125rem;
+                                box-sizing: border-box;
+                                background-color: #5c9cb7;
+                                color: #fff;
+                                display: inline-block;
+                                text-align: center;
+                                border-radius: .1875rem;
+                                font-size: .65rem;
+                            }
+                            &:last-child {
+                                color: #969696;
+                                font-size: .65rem;
+                            }
+                        }
+                    }
+                    .doctor {
+                        color: #969696;
+                        font-size: .65rem;
+                    }
+                }
+            }
+            .doctor_reply>span {
+                &:first-child {
+                    background-color: #5c9cb7;
+                }
+                &:last-child {
+                    color: #000;
+                    font-size: .65rem;
+                }
+            }
+            .content_text {
+                font-size: .625rem;
+                p {
+                    width: 100%;
+                    box-sizing: border-box;
+                    color: #000;
+                    padding: .625rem 0;
+                }
+            }
+            .reply_text {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                font-size: .625rem;
+                color: #000;
+                p {
+                    padding: .625rem 0;
+                }
+                .ask {
+                    color: #fff;
+                    background: @counter-style;
+                    padding: .3125rem;
+                }
+            }
+            .ask {
+                text-align: right;
+                button {
+                    padding: .125rem .3125rem;
+                    box-sizing: border-box;
+                    background-color: @counter-style;
+                    color: #fff;
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: .1875rem;
+                    font-size: .65rem;
+                }
+            }
+        }
+    }
+}
+
+.footer_aq {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff6f6;
+    .reply_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .625rem;
+        input {
+            width: 100%;
+            border: .5px solid #efdbdb;
+            padding: .28rem;
+        }
+        a {
+            margin-left: .625rem;
+            display: inline-block;
+            width: 2rem;
+            text-align: center;
+            background: @counter-style;
+            border-radius: @borderRadius;
+            color: #fff;
+            padding: .1875rem;
+            font-size: .65rem;
+        }
+    }
+}
+
+
+/* 患者端关爱讲堂 */
+
+.content {
+    .content_classroom {
+        ul {
+            margin: .625rem;
+            li {
+                padding: .625rem 0; // height: 1.875rem;
+                // line-height: 1.875rem;
+                box-sizing: border-box;
+                border-bottom: .5px solid #efdbdb;
+                position: relative;
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #000;
+                }
+                span {
+                    &:last-child {
+                        font-size: .58rem;
+                        color: #000;
+                    }
+                    &:first-child {
+                        width: 70%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
+                }
+            }
+        }
+    }
+    .content_classroom_details {
+        .detail_title {
+            text-align: center;
+            margin: .625rem;
+        }
+        .username_log {
+            .log_img {
+                margin: auto;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: .5px solid @backOpcity;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 100%;
+                }
+            }
+            .auther_time {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    margin: .625rem;
+                }
+            }
+        }
+        .detail_content {
+            padding: .625rem 1.25rem;
+            box-sizing: border-box;
+            p {
+                text-indent: 2em;
+            }
+        }
+    }
+}
+
+.btn_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .btn_bottom {
+        display: flex;
+        justify-content: center;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+        a {
+            width: 50%;
+            height: 1.875rem;
+            line-height: 1.875rem;
+            color: #fff;
+            display: block;
+            border-radius: @borderRadius;
+            margin: 0 .3125rem .3125rem;
+            background-color: @counter-style;
+            text-align: center;
+            &:last-child {
+                background-color: #efdbdb
+            }
+        }
+    }
+}
+
+
+/* 患者端复诊情况 */
+
+.content_vist {
+    margin: .625rem;
+    .vist_progress,
+    .vist_input {
+        display: flex;
+        padding: .625rem 0;
+        box-sizing: border-box;
+        border-bottom: .5px solid #efdbdb;
+        line-height: .8125rem;
+        label {
+            display: block;
+        }
+        .radio {
+            span {
+                vertical-align: middle;
+                padding: 0 .3125rem;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .radio_input {
+        box-sizing: border-box;
+        border-bottom: .5px solid #efdbdb;
+        padding-bottom: .625rem;
+        span {
+            margin-right: .625rem;
+        }
+    }
+    .vist_other {
+        padding: .625rem 0;
+        box-sizing: border-box;
+        label {
+            display: block;
+        }
+        textarea {
+            width: 100%;
+            border: .5px solid @backOpcity;
+            margin: .625rem 0;
+            background: @backOpcity;
+        }
+    }
+    .vist_progress {
+        input {
+            margin-right: .625rem;
+        }
+    }
+    .vist_btn {
+        button {
+            width: 100%;
+            height: 1.875rem;
+            background-color: @counter-style;
+            color: #fff;
+            border-radius: @borderRadius;
+        }
+    }
+}
+
+.footer_vist {
+    position: fixed;
+    bottom: -5.5rem;
+    width: 100%;
+    z-index: 99999;
+    .doctor_advice {
+        height: 2.5rem;
+        display: flex;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-bottom: .5px solid @backOpcity;
+        .advice {
+            background-color: @counter-style;
+            color: #fff; // padding: 0 .625rem;
+            width: 3.125rem;
+            box-sizing: border-box;
+            text-align: center;
+            p {
+                line-height: 1.25rem;
+            }
+        }
+        .record {
+            position: relative;
+            padding-left: 1.25rem;
+            width: 100%;
+            background: @backOpcity;
+            h3 {
+                margin-top: .3125rem;
+            }
+            p {
+                font-size: .625rem;
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1.25rem;
+                font-size: 1.5625rem;
+                color: @counter-style;
+            }
+        }
+    }
+    .content_info {
+        background: rgba(255, 255, 255, .6);
+        height: 5.5rem;
+        ul {
+            padding: .625rem;
+            li {
+                padding: .3125rem .3125rem;
+                border-bottom: .5px solid rgba(255, 255, 255, .6);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:last-child {
+                    border-bottom: none;
+                }
+                span {
+                    font-size: .625rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* 患者端即时通讯 */
+
+.content_chat_scoll {
+    padding-top: 1.875rem;
+    padding-bottom: 4.75rem;
+    box-sizing: border-box;
+    .preview_pdf {
+        .preview_pdf_title {
+            border: .5px solid #efdbdb;
+            background: @counter-style;
+            p {
+                text-align: center;
+                padding: .625rem 0;
+                color: #fff;
+            }
+        }
+        #pop iframe {
+            width: 100%;
+            height: 31.25rem;
+        }
+    }
+}
+
+.title a {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.content_chat {
+    .content_text {
+        box-sizing: border-box;
+        border-bottom: none;
+        margin: .3125rem;
+        margin-bottom: 0;
+        padding: .625rem;
+        .info {
+            margin: .625rem 0;
+            a {
+                border: .5px solid #efdbdb;
+                box-sizing: border-box;
+                position: relative;
+                display: inline-table;
+            }
+            img {
+                height: 1.875rem;
+                width: 1.875rem;
+            }
+            span {
+                max-width: 70%;
+                font-size: .6875rem;
+                border-radius: @borderRadius;
+                background-color: #b2e281;
+                padding: .3125rem;
+                box-sizing: border-box;
+                color: #000;
+                align-items: baseline;
+            }
+        }
+        .right_text {
+            display: flex;
+            justify-content: flex-end;
+            span {
+                text-align: left;
+                margin-right: .3125rem;
+            }
+            a {
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: .3125rem solid transparent;
+                    border-left: .625rem solid #b2e281;
+                    border-bottom: .3125rem solid transparent;
+                    position: absolute;
+                    top: 50%;
+                    left: -.6rem;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .left_text {
+            display: flex;
+            justify-content: flex-start;
+            .info_text {
+                max-width: 70%;
+                span {
+                    text-align: left;
+                    margin-left: .3125rem;
+                    background-color: #fff;
+                    border: 1px solid #f5f0f0; // padding: .625rem;
+                    display: block;
+                    max-width: 100%;
+                }
+                p {
+                    padding-left: .625rem;
+                    padding-bottom: .1875rem;
+                    font-size: 13px;
+                }
+            }
+            a {
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: .3125rem solid transparent;
+                    border-right: .625rem solid #fff;
+                    border-bottom: .3125rem solid transparent;
+                    position: absolute;
+                    bottom: 0;
+                    right: -.7rem;
+                }
+            }
+            .song {
+                margin: 0;
+                width: 50%;
+                background: #fff;
+                border-radius: 0.3125rem;
+                border: 1px solid #f5f0f0;
+                margin-left: 2.3rem;
+                position: absolute;
+                padding: 1rem 0;
+                bottom: 0;
+                .icon-rss:before {
+                    transform: rotateZ(45deg);
+                }
+                .icon-rss {
+                    position: absolute;
+                    top: 50%;
+                    left: .9375rem;
+                    transform: translateY(-50%);
+                }
+                span {
+                    position: absolute;
+                    right: -1rem;
+                    padding: 0;
+                    margin: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: initial;
+                    border: none;
+                }
+            }
+        }
+        .yu {
+            display: block;
+            height: 3.2rem;
+            position: relative;
+            label {
+                position: absolute;
+                margin-left: .625rem;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.footer_chat {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff6f6;
+    .send {
+        display: flex;
+        justify-content: space-between;
+        padding: .3125rem .625rem;
+        box-sizing: border-box;
+        background: #f1f1f1;
+        align-items: center;
+        .button {
+            margin-left: .625rem;
+            a {
+                background-color: @counter-style;
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: @borderRadius;
+                color: #fff;
+                width: 2.5rem;
+                padding: .15rem 0;
+                display: inline-block;
+            }
+        }
+        .input {
+            width: 100%;
+            input {
+                width: 100%;
+                height: 1.5625rem;
+                padding: .3125rem;
+                box-sizing: border-box;
+                border: 1px solid #efdbdb;
+                border-radius: .1875rem;
+            }
+        }
+    }
+    .chat_member {
+        .file_download {
+            display: flex;
+            justify-content: space-between;
+            padding: .3125rem .625rem;
+            box-sizing: border-box;
+            border-bottom: .5px solid #efdbdb;
+            background: #fff;
+            a {
+                padding: .3125rem .625rem;
+                background-color: @counter-style;
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: @borderRadius;
+                color: #fff;
+            }
+        }
+        .preview {
+            width: 40%;
+            text-align: right;
+        }
+    }
+}
+
+
+/* 患者端用户列表 */
+
+.content_user_scoll {
+    padding-top: 1.875rem; //padding-bottom: 4.75rem;
+    box-sizing: border-box;
+    .content_user {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 3.4375rem;
+                margin: .6rem;
+                p {
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding: 0 .3125rem;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    padding-top: 5px;
+                }
+                img {
+                    border-radius: @borderRadius;
+                    width: 100%;
+                    box-shadow: -.3125rem 0 3125rem @backOpcity, /*左边阴影*/
+                    .3125rem 0 .3125rem @backOpcity, /*右边阴影*/
+                    0 -.3125rem .3125rem @backOpcity, /*顶部阴影*/
+                    0 .3125rem .3125rem @backOpcity;
+                    /*底边阴影*/
+                }
+            }
+        }
+    }
+}
