@@ -249,6 +249,7 @@ section .register_btn {
             box-sizing: border-box;
             border: none;
             margin-top: .625rem;
+            background: @backOpcity;
         }
     }
     p {
@@ -263,6 +264,20 @@ section .register_btn {
         img {
             width: 80%;
         }
+    }
+}
+
+.visit_record {
+    margin: 1.25rem .625rem 0; 
+    a {
+        width: 100%;
+        height: 1.875rem;
+        background-color: @counter-style;
+        color: #fff;
+        border-radius: 0.3125rem;
+        display: block;
+        line-height: 1.875rem;
+        text-align: center;
     }
 }
 
@@ -434,8 +449,7 @@ section .register_btn {
         ul {
             margin: .625rem;
             li {
-                padding: .625rem 0; // height: 1.875rem;
-                // line-height: 1.875rem;
+                padding: .625rem 0;
                 box-sizing: border-box;
                 border-bottom: .5px solid #efdbdb;
                 position: relative;
@@ -443,19 +457,18 @@ section .register_btn {
                     display: flex;
                     justify-content: space-between;
                     color: #000;
+                    align-items: center;
                 }
                 span {
                     &:last-child {
-                        font-size: .58rem;
-                        color: #000;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        img {
+                            width: 100%;
+                        }
                     }
                     &:first-child {
                         width: 70%;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
                     }
                 }
             }

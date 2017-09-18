@@ -225,6 +225,7 @@ section .register_btn {
   box-sizing: border-box;
   border: none;
   margin-top: .625rem;
+  background: rgba(0, 0, 0, 0.1);
 }
 .content_detail p {
   padding: .625rem;
@@ -238,6 +239,19 @@ section .register_btn {
 }
 .content_detail .sufferer_img img {
   width: 80%;
+}
+.visit_record {
+  margin: 1.25rem .625rem 0;
+}
+.visit_record a {
+  width: 100%;
+  height: 1.875rem;
+  background-color: #FFB6C1;
+  color: #fff;
+  border-radius: 0.3125rem;
+  display: block;
+  line-height: 1.875rem;
+  text-align: center;
 }
 /* 医生端答教 */
 .chat,
@@ -402,18 +416,17 @@ section .register_btn {
   display: flex;
   justify-content: space-between;
   color: #000;
+  align-items: center;
 }
 .content .content_classroom ul li span:last-child {
-  font-size: .58rem;
-  color: #000;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.content .content_classroom ul li span:last-child img {
+  width: 100%;
 }
 .content .content_classroom ul li span:first-child {
   width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 }
 .content .content_classroom_details .detail_title {
   text-align: center;

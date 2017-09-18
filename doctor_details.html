@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/jquery-weui-build/lib/weui.min.css">
+    <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/doctor.css">
+    <title>医生个人信息</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <h1 class="f14">医生个人信息</h1>
+        </div>
+    </header>
+    <section class="content" style="padding-bottom:0">
+        <section>
+            <div class="logo w">
+                <img src="./images/logo.png" alt="">
+            </div>
+        </section>
+        <form class="register" id="formRegister">
+            <div class="username input_text">
+                <label for="">请您填写以下信息</label>
+                <!-- <label for="">医生姓名*</label> -->
+                <span class="add-on"><i class="icon-user-md"></i></span>
+                <input type="text" name="username" placeholder="请输入姓名">
+            </div>
+            <div class="phone input_text">
+                <!-- <label for="">医生手机（必须为医生本人实名认证手机，作为系统登录用户）*</label> -->
+                <span class="add-on"><i class="icon-phone"></i></span>
+                <input type="text" name="phone" placeholder="请输入手机号，作为系统登录用户">
+            </div>
+            <div class="password input_text">
+                <!-- <label for=""> 登陆密码*</label> -->
+                <span class="add-on"><i class="icon-lock"></i></span>
+                <input type="password" name="password" placeholder="请输入登陆密码">
+            </div>
+            <div class=" input_text">
+                <!-- <label for=""> 所在省市*</label> -->
+                <span class="add-on"><i class="icon-map-marker"></i></span>
+                <select name="" id="" placeholder="所在省市">
+                    <option class="option_color" value="所在省市" selected>所在省市</option>
+                </select>
+            </div>
+            <div class=" input_text">
+                <!-- <label for=""> 所在医院*</label> -->
+                <span class="add-on"><i class="icon-hospital"></i></span>
+                <select name="" id="" placeholder="所在医院">
+                    <option class="option_color" value="所在医院" selected>所在医院</option>
+                </select>
+            </div>
+            <div class=" input_text">
+                <!-- <label for=""> 所在科室*</label> -->
+                <span class="add-on"><i class="icon-medkit"></i></span>
+                <select name="" id="" placeholder="所在科室">
+                    <option class="option_color" value="所在科室" selected>所在科室</option>
+                </select>
+            </div>
+            <div class=" input_text">
+                <!-- <label for=""> 所在科室*</label> -->
+                <span class="add-on"><i class="icon-stethoscope"></i></span>
+                <select name="" id="" placeholder="职称">
+                    <option class="option_color" value="职称" selected>职称</option>
+                </select>
+            </div>
+            <div class="medical_history">
+                <label for="">3种擅长疾病</label>
+                <textarea name="medical_history" id="medical_history" rows="10" placeholder="请输入擅长疾病"></textarea>
+            </div>
+            <div class="upload_case input_text">
+                <label for="">执业医师证照片（带执业地点页）或卫计委网站查询截图</label>
+                <div class="upload_file weui-uploader__bd clearfix">
+                    <ul class="weui-uploader__files fl" id="uploaderFiles">
+                        <li class="weui-uploader__file weui-uploader__file_status" dataId='4' style="background-image:url(./images/timg.jpg)">
+                            <i class="icon-trash"></i>
+                            <div class="weui-uploader__file-content">
+                                <i class="weui-icon-warn"></i>
+                            </div>
+                        </li>
+                        <li class="weui-uploader__file weui-uploader__file_status" dataId='5' style="background-image:url(./images/timg.jpg)">
+                            <i class="icon-trash"></i>
+                            <div class="weui-uploader__file-content">50%</div>
+                        </li>
+                    </ul>
+                    <div class="weui-uploader__input-box">
+                        <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+            <div class="upload_case input_text">
+                <label for="">医生本人一寸电子照片</label>
+                <div class="upload_file weui-uploader__bd clearfix">
+                    <ul class="weui-uploader__files fl" id="uploaderFiles">
+                        <li class="weui-uploader__file" dataId='1' style="background-image:url(./images/timg.jpg)">
+                            <i class="icon-trash"></i>
+                            <div class="weui-uploader__file-content">
+                                <i class="weui-icon-warn"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="weui-uploader__input-box">
+                        <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+            <div class="birthday input_text">
+                <span class="add-on"><i class="icon-list-alt"></i></span>
+                <input type="text" name="birthday" placeholder="请输入身份证号">
+            </div>
+            <div class="patientNumber input_text">
+                <span class="add-on"><i class=" icon-credit-card"></i></span>
+                <input type="text" name="patientNumber" placeholder="银行卡号（医生本人储蓄卡）">
+            </div>
+            <div class="patientNumber input_text">
+                <span class="add-on"><i class="icon-user-md"></i></span>
+                <input type="text" name="patientNumber" placeholder="开户行信息（姓名）">
+            </div>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class="icon-barcode"></i></span>
+                <input type="text" name="code" placeholder="邀请码">
+            </div>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class="icon-user"></i></span>
+                <input type="text" name="code" placeholder="项目专员姓名">
+            </div>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class=" icon-phone"></i></span>
+                <input type="text" name="code" placeholder="项目专员电话">
+            </div>
+            <!-- <div class="informed_consent">
+                <input id="informed_consent" type="checkbox" name="informed_consent" checked value="1">
+                <span class="informed">知情同意书</span>
+            </div> -->
+        </form>
+        <div class="register_btn">
+            <button id="register_form" class="f14">提&nbsp;交</button>
+        </div>
+    </section>
+    <div class="bg_model none"></div>
+    <div class="modal_content none login_modal_content"></div>
+    <div class="weui-loadmore none">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+
+    <script src="./js/jquery-weui-build/lib/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui-build/js/jquery-weui.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        function checkBox(obj) {
+            if (obj.is(":checked")) {
+                $('input.mybox').prop('checked', false).val(0);
+                obj.prop('checked', true).val(1);
+            }
+        }
+        $(function () {
+            var flag = true;
+            $(document).delegate('.surgery_checked', 'click', function () {
+                $('input[name=surgery]').prop('checked', true).val(0);
+                $('input[name=non_surgical]').prop('checked', false).val('');
+            })
+            $(document).delegate('.non_surgical_checked', 'click', function () {
+                $('input[name=surgery]').prop('checked', false).val('');
+                $('input[name=non_surgical]').prop('checked', true).val(0);
+            })
+            $(document).delegate('.informed', 'click', function () {
+                if (flag) {
+                    $('#informed_consent').prop('checked', false).val(0);
+                    flag = false;
+                } else {
+                    $('#informed_consent').prop('checked', true).val(1);
+                    flag = true;
+                }
+            })
+            //表单验证
+            $('#register_form').click(function () {
+                var username = $('input[name=username]').val();
+                var birthday = $('input[name=birthday]').val();
+                var patientNumber = $('input[name=patientNumber]').val();
+                var phone = $('input[name=phone]').val();
+                var password = $('input[name=password]').val();
+                var medical_history = $('#medical_history').val();
+                if (username == '' || username == null) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入姓名');
+                    timer();
+                } else if (birthday == '' || birthday == null) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入出生日期');
+                    timer();
+                } else if (patientNumber == '' || patientNumber == null) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入门诊号');
+                    timer();
+                } else if (phone == '' || phone == null) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入手机号');
+                    timer();
+                } else if (!checkPhone()) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入正确的手机号');
+                    timer();
+                } else if (password == '' || username == null) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入密码');
+                    timer();
+                } else if (medical_history.length <= 0) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入病例病史');
+                    timer();
+                } else if (medical_history.length >= 100) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请输入的病例病史字数不能超过100字');
+                    timer();
+                } else {
+                    console.log($('#formRegister').serialize())
+                    $.ajax({
+                        url: '',
+                        type: 'post',
+                        data: $('#formRegister').serialize(),
+                        beforeSend: function () {
+                            $('.weui-loadmore').show();
+                            $('.bg_model').show();
+                        },
+                        success: function (data) {
+                            if (data.type == "success") {
+                                window.location.href = './index';
+                            } else {
+                                // $('.bg_model').fadeIn();
+                                // $('.modal_content').fadeIn().text(data.message);
+                                // timer();
+                            }
+                        }
+                    })
+                }
+            })
+
+            //文件上传
+            var uploaderInput = document.getElementById('uploaderInput');
+            var html = '';
+            uploaderInput.addEventListener('change', function () {
+                var file = uploaderInput.files[0];
+                //解决上传相同文件不触发onchange事件  
+                var clone = uploaderInput.cloneNode(true);
+                clone.onchange = arguments.callee; //克隆不会复制动态绑定事件
+                clone.value = '';
+                uploaderInput.parentNode.replaceChild(clone, uploaderInput);
+                var val = uploaderInput.value;
+                html += '<li class="weui-uploader__file" dataId="2" style="background-image:url(' + val + ')">'
+                html += '< i class="icon-trash" ></i >'
+                html += '<div class="weui-uploader__file-content">'
+                html += '<i class="weui-icon-warn"></i>'
+                html += '</div>'
+                html += '</li >'
+                $('#uploaderFiles').append(html);
+            }, false);
+
+            //删除图片文件
+            $(document).delegate('li .icon-trash', 'click', function () {
+                var _this = $(this);
+                var data = _this.attr('dataId');
+                $.ajax({
+                    url: '',
+                    type: 'post',
+                    data: data,
+                    beforeSend: function () {
+                        $('.weui-loadmore').show();
+                        $('.bg_model').show();
+                    },
+                    success: function (info) {
+                        _this.parent().remove();
+                        $('.weui-loadmore').hide();
+                        $('.bg_model').hide();
+                    }
+                })
+            })
+
+
+
+        })
+    </script>
+</body>
+
+</html>
