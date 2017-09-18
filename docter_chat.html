@@ -10,11 +10,9 @@
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./js/jquery-weui-build/lib/weui.min.css">
     <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="./css/sufferer.css">
+    <link rel="stylesheet" href="./css/doctor.css">
     <script src="./js/jquery-weui-build/lib/jquery-2.1.4.js"></script>
     <script src="./js/jquery-weui-build/js/jquery-weui.min.js"></script>
-    <script src="./js/pdf.js"></script>
-    <script src="./js/pdf.worker.js"></script>
     <script src="./js/common.js"></script>
     <title>在线讲堂</title>
 </head>
@@ -138,8 +136,9 @@
     <footer class="footer_chat">
         <div class="send">
             <div class="input">
-                <i class=""></i>
-                <input type="text" name="content">
+                <i class="icon-rss"></i>
+                <div class="talk">按住&nbsp;说话</div>
+                <input type="text" name="content" class="none">
             </div>
             <div class="button">
                 <a id="send_chat">发送</a>
@@ -161,7 +160,7 @@
             $(document).delegate('#preview', 'click', function () {
                 $('#container').fadeToggle();
             })
-            
+
             //发送消息
             $(document).delegate('#send_chat', 'click', function () {
                 var html = '';

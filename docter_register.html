@@ -43,57 +43,42 @@
                 <span class="add-on"><i class="icon-lock"></i></span>
                 <input type="password" name="password" placeholder="请输入登陆密码">
             </div>
-            <div class="birthday input_text">
+            <div class=" input_text">
                 <!-- <label for=""> 所在省市*</label> -->
                 <span class="add-on"><i class="icon-map-marker"></i></span>
                 <select name="" id="" placeholder="所在省市">
-                    <option value=""></option>
+                    <option class="option_color" value="所在省市" selected>所在省市</option>
                 </select>
             </div>
-            <div class="birthday input_text">
+            <div class=" input_text">
                 <!-- <label for=""> 所在医院*</label> -->
                 <span class="add-on"><i class="icon-hospital"></i></span>
                 <select name="" id="" placeholder="所在医院">
-                    <option value=""></option>
+                    <option class="option_color" value="所在医院" selected>所在医院</option>
                 </select>
             </div>
-            <div class="birthday input_text">
+            <div class=" input_text">
                 <!-- <label for=""> 所在科室*</label> -->
                 <span class="add-on"><i class="icon-medkit"></i></span>
                 <select name="" id="" placeholder="所在科室">
-                    <option value=""></option>
+                    <option class="option_color" value="所在科室" selected>所在科室</option>
                 </select>
             </div>
-            <div class="birthday input_text">
-                <span class="add-on"><i class="icon-calendar"></i></span>
-                <input type="text" name="birthday" placeholder="请输入出生日期">
+            <div class=" input_text">
+                <!-- <label for=""> 所在科室*</label> -->
+                <span class="add-on"><i class="icon-stethoscope"></i></span>
+                <select name="" id="" placeholder="职称">
+                    <option class="option_color" value="职称" selected>职称</option>
+                </select>
             </div>
-            <div class="patientNumber input_text">
-                <span class="add-on"><i class="icon-plus-sign-alt"></i></span>
-                <input type="text" name="patientNumber" placeholder="请输入门诊号">
+            <div class="medical_history">
+                <label for="">3种擅长疾病</label>
+                <textarea name="medical_history" id="medical_history" rows="10" placeholder="请输入擅长疾病"></textarea>
             </div>
             <div class="upload_case input_text">
-                <label for="">上传病例</label>
+                <label for="">执业医师证照片（带执业地点页）或卫计委网站查询截图</label>
                 <div class="upload_file weui-uploader__bd clearfix">
-                    <ul class="weui-uploader__files" id="uploaderFiles">
-                        <li class="weui-uploader__file" dataId='1' style="background-image:url(./images/timg.jpg)">
-                            <i class="icon-trash"></i>
-                            <div class="weui-uploader__file-content">
-                                <i class="weui-icon-warn"></i>
-                            </div>
-                        </li>
-                        <li class="weui-uploader__file" dataId='2' style="background-image:url(./images/timg.jpg)">
-                            <i class="icon-trash"></i>
-                            <div class="weui-uploader__file-content">
-                                <i class="weui-icon-warn"></i>
-                            </div>
-                        </li>
-                        <li class="weui-uploader__file" dataId='3' style="background-image:url(./images/timg.jpg)">
-                            <i class="icon-trash"></i>
-                            <div class="weui-uploader__file-content">
-                                <i class="weui-icon-warn"></i>
-                            </div>
-                        </li>
+                    <ul class="weui-uploader__files fl" id="uploaderFiles">
                         <li class="weui-uploader__file weui-uploader__file_status" dataId='4' style="background-image:url(./images/timg.jpg)">
                             <i class="icon-trash"></i>
                             <div class="weui-uploader__file-content">
@@ -110,29 +95,53 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="upload_case input_text">
+                <label for="">医生本人一寸电子照片</label>
+                <div class="upload_file weui-uploader__bd clearfix">
+                    <ul class="weui-uploader__files fl" id="uploaderFiles">
+                        <li class="weui-uploader__file" dataId='1' style="background-image:url(./images/timg.jpg)">
+                            <i class="icon-trash"></i>
+                            <div class="weui-uploader__file-content">
+                                <i class="weui-icon-warn"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="weui-uploader__input-box">
+                        <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+            <div class="birthday input_text">
+                <span class="add-on"><i class="icon-list-alt"></i></span>
+                <input type="text" name="birthday" placeholder="请输入身份证号">
+            </div>
+            <div class="patientNumber input_text">
+                <span class="add-on"><i class=" icon-credit-card"></i></span>
+                <input type="text" name="patientNumber" placeholder="银行卡号（医生本人储蓄卡）">
+            </div>
+            <div class="patientNumber input_text">
+                <span class="add-on"><i class="icon-user-md"></i></span>
+                <input type="text" name="patientNumber" placeholder="开户行信息（姓名）">
+            </div>
             <div class="code input_text">
                 <!-- <label for="">推荐码</label> -->
                 <span class="add-on"><i class="icon-barcode"></i></span>
                 <input type="text" name="code" placeholder="邀请码">
             </div>
-            <div class="surgery">
-                <label for="">现阶段治疗方法</label>
-                <div class="radio">
-                    <input class="mybox" type="radio" name="surgery" checked='checked' value="1" onclick="checkBox($(this))">
-                    <span class="surgery_checked">手术</span>
-                    <input class="mybox" type="radio" name="non_surgical" onclick="checkBox($(this))">
-                    <span class="non_surgical_checked">非手术</span>
-                </div>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class="icon-user"></i></span>
+                <input type="text" name="code" placeholder="项目专员姓名">
             </div>
-            <div class="medical_history">
-                <textarea name="medical_history" id="medical_history" rows="10" placeholder="病例病史："></textarea>
-                <p>字数不能超过100字</p>
+            <div class="code input_text">
+                <!-- <label for="">推荐码</label> -->
+                <span class="add-on"><i class=" icon-phone"></i></span>
+                <input type="text" name="code" placeholder="项目专员电话">
             </div>
-            <div class="informed_consent">
+            <!-- <div class="informed_consent">
                 <input id="informed_consent" type="checkbox" name="informed_consent" checked value="1">
                 <span class="informed">知情同意书</span>
-            </div>
+            </div> -->
         </form>
         <div class="register_btn">
             <button id="register_form" class="f14">提&nbsp;交</button>

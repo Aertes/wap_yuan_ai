@@ -143,6 +143,19 @@
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.1);
 }
+.register .input_text select {
+  width: 100%;
+  height: 1.875rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  padding-left: 1.875rem;
+  padding-right: .625rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
+}
+.register .input_text select option.option_color {
+  color: rgba(0, 0, 0, 0.1);
+}
 .register .input_text .add-on {
   position: absolute;
   line-height: 1.9rem;
@@ -753,14 +766,32 @@ section .register_btn {
 }
 .footer_chat .send .input {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+.footer_chat .send .input .talk,
 .footer_chat .send .input input {
   width: 100%;
   height: 1.5625rem;
   padding: .3125rem;
   box-sizing: border-box;
-  border: 1px solid #efdbdb;
+  border: 1px solid #e2e2e2;
   border-radius: .1875rem;
+}
+.footer_chat .send .input i {
+  padding: .32rem .4125rem;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  margin-right: .625rem;
+}
+.footer_chat .send .input i:before {
+  transform: rotateZ(45deg);
+}
+.footer_chat .send .input .talk {
+  padding: 0;
+  line-height: 1.5625rem;
+  text-align: center;
 }
 .footer_chat .chat_member .file_download {
   display: flex;
