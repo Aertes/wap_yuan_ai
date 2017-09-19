@@ -2,7 +2,7 @@
 @borderRadius: .3125rem;
 @backOpcity: rgba(0, 0, 0, 0.1);
 
-/* 患者端登录 */
+/* 医生端登录 */
 
 .logo {
     text-align: center;
@@ -75,7 +75,7 @@
 }
 
 
-/* 患者端注册 */
+/* 医生端注册 */
 
 .icon-mobile-phone {
     font-size: .875rem;
@@ -129,9 +129,6 @@
             width: 100%;
         }
         .upload_btn {
-            // overflow: hidden;
-            // margin: .625rem;
-            // padding: .625rem .625rem 0 .625rem;
             width: 5.25rem;
             height: 5.25rem;
             margin: auto .3125rem;
@@ -163,6 +160,19 @@
             padding-right: .625rem;
             box-sizing: border-box;
             background: @backOpcity;
+        }
+        select {
+            width: 100%;
+            height: 1.875rem;
+            border: .5px solid @backOpcity;
+            border-radius: @borderRadius;
+            padding-left: 1.875rem;
+            padding-right: .625rem;
+            box-sizing: border-box;
+            background: @backOpcity;
+            option.option_color {
+                color: @backOpcity;
+            }
         }
         .add-on {
             position: absolute;
@@ -203,7 +213,7 @@ section .register_btn {
 }
 
 
-/* 患者端详情 */
+/* 医生端详情 */
 
 .content_detail {
     box-sizing: border-box;
@@ -215,7 +225,7 @@ section .register_btn {
             &:first-child {
                 width: 33%;
                 text-align: left;
-                display: flex; // font-weight: bold;
+                display: flex;
                 color: #000;
                 justify-content: space-between;
             }
@@ -257,8 +267,22 @@ section .register_btn {
     }
 }
 
+.visit_record {
+    margin: 1.25rem .625rem 0; 
+    a {
+        width: 100%;
+        height: 1.875rem;
+        background-color: @counter-style;
+        color: #fff;
+        border-radius: 0.3125rem;
+        display: block;
+        line-height: 1.875rem;
+        text-align: center;
+    }
+}
 
-/* 患者端答教 */
+
+/* 医生端答教 */
 
 .chat,
 .vist,
@@ -418,7 +442,7 @@ section .register_btn {
 }
 
 
-/* 患者端关爱讲堂 */
+/* 医生端关爱讲堂 */
 
 .content {
     .content_classroom {
@@ -429,9 +453,6 @@ section .register_btn {
                 box-sizing: border-box;
                 border-bottom: .5px solid #efdbdb;
                 position: relative;
-                &:last-child {
-                    border-bottom: none;
-                }
                 a {
                     display: flex;
                     justify-content: space-between;
@@ -442,7 +463,7 @@ section .register_btn {
                     &:last-child {
                         width: 2.5rem;
                         height: 2.5rem;
-                        img{
+                        img {
                             width: 100%;
                         }
                     }
@@ -517,7 +538,7 @@ section .register_btn {
 }
 
 
-/* 患者端复诊情况 */
+/* 医生端复诊情况 */
 
 .content_vist {
     margin: .625rem;
@@ -641,7 +662,7 @@ section .register_btn {
 }
 
 
-/* 患者端即时通讯 */
+/* 医生端即时通讯 */
 
 .content_chat_scoll {
     padding-top: 1.875rem;
@@ -830,13 +851,31 @@ section .register_btn {
         }
         .input {
             width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .talk,
             input {
                 width: 100%;
                 height: 1.5625rem;
                 padding: .3125rem;
                 box-sizing: border-box;
-                border: 1px solid #efdbdb;
+                border: 1px solid #e2e2e2;
                 border-radius: .1875rem;
+            }
+            i {
+                padding: .32rem .4125rem;
+                border-radius: 50%;
+                border: 1px solid #e2e2e2;
+                margin-right: .625rem;
+                &:before {
+                    transform: rotateZ(45deg);
+                }
+            }
+            .talk {
+                padding: 0;
+                line-height: 1.5625rem;
+                text-align: center;
             }
         }
     }
@@ -865,7 +904,7 @@ section .register_btn {
 }
 
 
-/* 患者端用户列表 */
+/* 医生端用户列表 */
 
 .content_user_scoll {
     padding-top: 1.875rem; //padding-bottom: 4.75rem;

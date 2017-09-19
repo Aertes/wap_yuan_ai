@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./js/jquery-weui-build/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/sufferer.css">
+    <script src="./js/jquery-weui-build/lib/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui-build/js/jquery-weui.min.js"></script>
+    <script src="./js/common.js"></script>
+    <title>复诊情况</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <i class="icon-reply"></i>
+            <h1 class="f14">复诊情况</h1>
+        </div>
+    </header>
+    <section class="content">
+        <div class="content_vist">
+            <form id="formVist" class="form_vist">
+                <div class="radio_input">
+                    <label for="">近一周是否按医嘱坚持服药：</label>
+                    <!-- <div class="radio"> -->
+                    <input type="radio" name="drug" value="" id="" class="mybox" onclick="checkBox($(this));">
+                    <span>是</span>
+                    <input type="radio" name="drug" value="" id="" class="mybox" onclick="checkBox($(this));">
+                    <span>否</span>
+                    <!-- </div> -->
+                </div>
+                <div class="vist_input">
+                    <label for="">原因：</label>
+                    <div class="radio">
+                        <input type="radio" name="reason" id="" class="reason" onclick="checkBox1($(this));">
+                        <span>停药</span>
+                        <input type="radio" name="reason" id="" class="reason" onclick="checkBox1($(this));">
+                        <span>漏服</span>
+                    </div>
+                </div>
+                <div class="vist_progress">
+                    <input type="radio" name="progress" id="" class="progress" onclick="checkBox2($(this));">
+                    <label for="">我的病已好转，没必要再继续服药</label>
+                </div>
+                <div class="vist_progress">
+                    <input type="radio" name="progress" id="" class="progress" onclick="checkBox2($(this));">
+                    <label for="">我的病没有改善，服药没有用处</label>
+                </div>
+                <div class="vist_progress">
+                    <input type="radio" name="progress" id="" class="progress" onclick="checkBox2($(this));">
+                    <label for=""> 担心药物对我大脑有伤害</label>
+                </div>
+                <div class="vist_other">
+                    <label for="">其他：</label>
+                    <textarea name="other" id="" rows="5" placeholder="请输入其他原原因！"></textarea>
+                </div>
+            </form>
+            <div class="vist_btn">
+                <button id="vist_form" class="f14">确&nbsp;定</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer_vist">
+        <div class="doctor_advice">
+            <div class="advice">
+                <p>遵循</p>
+                <p>医嘱</p>
+            </div>
+            <div class="record">
+                <h3>近一周是否按医嘱坚持服药 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <p>2016-06-03 记录</p>
+                <i class="icon-double-angle-up"></i>
+            </div>
+        </div>
+        <div class="content_info">
+            <ul>
+                <li>
+                    <span>近一周是否按医嘱坚持服药：</span>
+                    <span>否</span>
+                </li>
+                <li>
+                    <span>原因：</span>
+                    <span>停药</span>
+                </li>
+                <li>
+                    <span>停药原因：</span>
+                    <span>我的并已好转，没必要再继续服药</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="bg_model none"></div>
+    <div class="modal_content none login_modal_content"></div>
+    <div class="weui-loadmore none">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+    <script>
+        function checkBox(obj) {
+            if (obj.is(":checked")) {
+                $('input.mybox').prop('checked', false).val('');
+                obj.prop('checked', true).val(1);
+            }
+        }
+        function checkBox1(obj) {
+            if (obj.is(":checked")) {
+                $('input.reason').prop('checked', false).val('');
+                obj.prop('checked', true).val(1);
+            }
+        }
+        function checkBox2(obj) {
+            if (obj.is(":checked")) {
+                $('input.progress').prop('checked', false).val('');
+                obj.prop('checked', true).val(1);
+            }
+        }
+        $(function () {
+            //提交表单
+            $(document).delegate('#vist_form', 'click', function(){
+                var drug = $('input[name=drug]');
+                var reason = $('input[name=reason]');
+                var progress = $('input[name=progress]');
+                //var drug = $('input[name=drug]')
+                if (!drug.is(":checked")) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请选择是否按医嘱服药');
+                    timer();
+                }else if(!reason.is(":checked")){
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请选择原因');
+                    timer();
+                } else if (!progress.is(":checked")) {
+                    $('.bg_model').fadeIn();
+                    $('.modal_content').fadeIn().text('请选择停药原因');
+                    timer();
+                }else{
+                    console.log($('#formVist').serialize())
+                    $.ajax({
+                        url: '',
+                        type: 'post',
+                        data: $('#formVist').serialize(),
+                        beforeSend: function () {
+                            $('.weui-loadmore').show();
+                            $('.bg_model').show();
+                        },
+                        success: function (data) {
+                            if (data.type == "success") {
+                                window.location.href = './index';
+                            } else {
+                                // $('.bg_model').fadeIn();
+                                // $('.modal_content').fadeIn().text(data.message);
+                                // timer();
+                            }
+                        }
+                    })
+                }
+            })
+            //下拉详情
+            var flag = true;
+            $(document).delegate('.doctor_advice', 'click', function (){
+                if(flag){
+                    $('.bg_model').fadeIn();
+                    $('.record i').removeClass('icon-double-angle-up').addClass('icon-double-angle-down');
+                    $('.footer_vist').animate({
+                        "bottom": 0
+                    })
+                    flag = false;
+                }else{
+                    $('.bg_model').fadeOut();
+                    $('.record i').removeClass('icon-double-angle-down').addClass('icon-double-angle-up');
+                    $('.footer_vist').animate({
+                        "bottom": "-5.5rem"
+                    })
+                    flag = true;
+                }
+                
+            })
+        })
+    </script>
+</body>
+
+</html>

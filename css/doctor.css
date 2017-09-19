@@ -1,4 +1,4 @@
-/* 患者端登录 */
+/* 医生端登录 */
 .logo {
   text-align: center;
   width: 6.25rem;
@@ -63,7 +63,7 @@
   padding: 1.25rem .9375rem;
   box-sizing: border-box;
 }
-/* 患者端注册 */
+/* 医生端注册 */
 .icon-mobile-phone {
   font-size: .875rem;
 }
@@ -143,6 +143,19 @@
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.1);
 }
+.register .input_text select {
+  width: 100%;
+  height: 1.875rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  padding-left: 1.875rem;
+  padding-right: .625rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
+}
+.register .input_text select option.option_color {
+  color: rgba(0, 0, 0, 0.1);
+}
 .register .input_text .add-on {
   position: absolute;
   line-height: 1.9rem;
@@ -177,7 +190,7 @@
 section .register_btn {
   margin: 1.25rem .625rem;
 }
-/* 患者端详情 */
+/* 医生端详情 */
 .content_detail {
   box-sizing: border-box;
 }
@@ -227,7 +240,20 @@ section .register_btn {
 .content_detail .sufferer_img img {
   width: 80%;
 }
-/* 患者端答教 */
+.visit_record {
+  margin: 1.25rem .625rem 0;
+}
+.visit_record a {
+  width: 100%;
+  height: 1.875rem;
+  background-color: #FFB6C1;
+  color: #fff;
+  border-radius: 0.3125rem;
+  display: block;
+  line-height: 1.875rem;
+  text-align: center;
+}
+/* 医生端答教 */
 .chat,
 .vist,
 .quiz {
@@ -376,7 +402,7 @@ section .register_btn {
   padding: .1875rem;
   font-size: .65rem;
 }
-/* 患者端关爱讲堂 */
+/* 医生端关爱讲堂 */
 .content .content_classroom ul {
   margin: .625rem;
 }
@@ -385,9 +411,6 @@ section .register_btn {
   box-sizing: border-box;
   border-bottom: .5px solid #efdbdb;
   position: relative;
-}
-.content .content_classroom ul li:last-child {
-  border-bottom: none;
 }
 .content .content_classroom ul li a {
   display: flex;
@@ -461,7 +484,7 @@ section .register_btn {
 .btn_footer .btn_bottom a:last-child {
   background-color: #efdbdb;
 }
-/* 患者端复诊情况 */
+/* 医生端复诊情况 */
 .content_vist {
   margin: .625rem;
 }
@@ -577,7 +600,7 @@ section .register_btn {
 .footer_vist .content_info ul li span {
   font-size: .625rem;
 }
-/* 患者端即时通讯 */
+/* 医生端即时通讯 */
 .content_chat_scoll {
   padding-top: 1.875rem;
   padding-bottom: 4.75rem;
@@ -756,14 +779,32 @@ section .register_btn {
 }
 .footer_chat .send .input {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+.footer_chat .send .input .talk,
 .footer_chat .send .input input {
   width: 100%;
   height: 1.5625rem;
   padding: .3125rem;
   box-sizing: border-box;
-  border: 1px solid #efdbdb;
+  border: 1px solid #e2e2e2;
   border-radius: .1875rem;
+}
+.footer_chat .send .input i {
+  padding: .32rem .4125rem;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  margin-right: .625rem;
+}
+.footer_chat .send .input i:before {
+  transform: rotateZ(45deg);
+}
+.footer_chat .send .input .talk {
+  padding: 0;
+  line-height: 1.5625rem;
+  text-align: center;
 }
 .footer_chat .chat_member .file_download {
   display: flex;
@@ -785,7 +826,7 @@ section .register_btn {
   width: 40%;
   text-align: right;
 }
-/* 患者端用户列表 */
+/* 医生端用户列表 */
 .content_user_scoll {
   padding-top: 1.875rem;
   box-sizing: border-box;
