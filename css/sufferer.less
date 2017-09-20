@@ -425,7 +425,7 @@ section .register_btn {
         ul {
             margin: .625rem;
             li {
-                padding: .625rem 0;
+                padding: .325rem 0;
                 box-sizing: border-box;
                 border-bottom: .5px solid #efdbdb;
                 position: relative;
@@ -442,12 +442,17 @@ section .register_btn {
                     &:last-child {
                         width: 2.5rem;
                         height: 2.5rem;
-                        img{
+                        img {
                             width: 100%;
                         }
                     }
                     &:first-child {
-                        width: 70%;
+                        width: 90%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
                     }
                 }
             }
@@ -601,7 +606,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
-            background: @backOpcity;
+            background: rgba(255, 255, 255, 0.5);
             h3 {
                 margin-top: .3125rem;
             }

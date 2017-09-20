@@ -268,7 +268,7 @@ section .register_btn {
 }
 
 .visit_record {
-    margin: 1.25rem .625rem 0; 
+    margin: 1.25rem .625rem 0;
     a {
         width: 100%;
         height: 1.875rem;
@@ -468,7 +468,12 @@ section .register_btn {
                         }
                     }
                     &:first-child {
-                        width: 70%;
+                        width: 90%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
                     }
                 }
             }
@@ -542,66 +547,6 @@ section .register_btn {
 
 .content_vist {
     margin: .625rem;
-    .vist_progress,
-    .vist_input {
-        display: flex;
-        padding: .625rem 0;
-        box-sizing: border-box;
-        border-bottom: .5px solid #efdbdb;
-        line-height: .8125rem;
-        label {
-            display: block;
-        }
-        .radio {
-            span {
-                vertical-align: middle;
-                padding: 0 .3125rem;
-                box-sizing: border-box;
-            }
-        }
-    }
-    .radio_input {
-        box-sizing: border-box;
-        border-bottom: .5px solid #efdbdb;
-        padding-bottom: .625rem;
-        span {
-            margin-right: .625rem;
-        }
-    }
-    .vist_other {
-        padding: .625rem 0;
-        box-sizing: border-box;
-        label {
-            display: block;
-        }
-        textarea {
-            width: 100%;
-            border: .5px solid @backOpcity;
-            margin: .625rem 0;
-            background: @backOpcity;
-        }
-    }
-    .vist_progress {
-        input {
-            margin-right: .625rem;
-        }
-    }
-    .vist_btn {
-        button {
-            width: 100%;
-            height: 1.875rem;
-            background-color: @counter-style;
-            color: #fff;
-            border-radius: @borderRadius;
-        }
-    }
-}
-
-.footer_vist {
-    position: fixed;
-    bottom: -5.5rem;
-    width: 100%;
-    z-index: 99999;
     .doctor_advice {
         height: 2.5rem;
         display: flex;
@@ -610,7 +555,7 @@ section .register_btn {
         border-bottom: .5px solid @backOpcity;
         .advice {
             background-color: @counter-style;
-            color: #fff; // padding: 0 .625rem;
+            color: #fff;
             width: 3.125rem;
             box-sizing: border-box;
             text-align: center;
@@ -622,7 +567,7 @@ section .register_btn {
             position: relative;
             padding-left: 1.25rem;
             width: 100%;
-            background: @backOpcity;
+            background: rgba(255, 255, 255, 0.5);
             h3 {
                 margin-top: .3125rem;
             }
@@ -633,7 +578,7 @@ section .register_btn {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                right: 1.25rem;
+                right: .7rem;
                 font-size: 1.5625rem;
                 color: @counter-style;
             }
@@ -934,6 +879,86 @@ section .register_btn {
                     0 -.3125rem .3125rem @backOpcity, /*顶部阴影*/
                     0 .3125rem .3125rem @backOpcity;
                     /*底边阴影*/
+                }
+            }
+        }
+    }
+}
+
+
+/* 项目专员 */
+
+.tel {
+    width: 100%;
+    height: 1.875rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125rem;
+    padding-left: 1.875rem;
+    padding-right: .625rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.1);
+    display: block;
+    line-height: 1.875rem;
+}
+
+.doctor_list {
+    .list_title {
+        background: rgba(255, 255, 255, 0.6);
+        border-bottom: .5px solid #fff;
+        h2 {
+            padding: .625rem 1.25rem;
+        }
+    }
+    .weui-search-bar__cancel-btn {
+        color: #888;
+    }
+    .weui-search-bar__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .weui-search-bar {
+        background: rgba(255, 255, 255, 0.6);
+    }
+    .weui-search-bar__form {
+        border-radius: @borderRadius;
+    }
+    .doctor_list_table {
+        padding: 0 .3125rem;
+        table {
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+            border-collapse: collapse;
+            thead {
+                tr {
+                    background: @counter-style;
+                    th {
+                        text-align: center;
+                        border: .5px solid #ececec;
+                        height: 1.875rem;
+                        line-height: 1.875rem;
+                        color: #fff;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        text-align: center;
+                        border: .5px solid #ececec;
+                        height: 1.875rem;
+                        line-height: 1.875rem;
+                        a {
+                            padding: .3125rem;
+                            border-radius: @borderRadius;
+                            box-sizing: border-box;
+                            font-size: .625rem;
+                        }
+                        .apply{
+                            background: @counter-style;
+                        }
+                    }
                 }
             }
         }

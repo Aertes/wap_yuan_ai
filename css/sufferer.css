@@ -381,7 +381,7 @@ section .register_btn {
   margin: .625rem;
 }
 .content .content_classroom ul li {
-  padding: .625rem 0;
+  padding: .325rem 0;
   box-sizing: border-box;
   border-bottom: .5px solid #efdbdb;
   position: relative;
@@ -403,7 +403,12 @@ section .register_btn {
   width: 100%;
 }
 .content .content_classroom ul li span:first-child {
-  width: 70%;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .content .content_classroom_details .detail_title {
   text-align: center;
@@ -541,7 +546,7 @@ section .register_btn {
   position: relative;
   padding-left: 1.25rem;
   width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
 }
 .footer_vist .doctor_advice .record h3 {
   margin-top: .3125rem;
